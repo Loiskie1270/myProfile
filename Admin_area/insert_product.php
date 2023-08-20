@@ -59,32 +59,32 @@ if(isset($_POST['insert_product'])){
 </style>
     
  </head>
- <body class="bg-light">
-     <div class="container w-50 mt-3">
-        <h3 class="text-bg-success text-center mb-0">INSERT PRODUCTS</h3>
+ <body style="background-color:#f5ffcf;color:#fff;">
+     <div class="container w-50 mt-3" style="background-color:#f5ffcf;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:100%; border-radius:5px; display:block; margin-left:auto; margin-right:auto;">
+        <h3 class="text-center mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:5px 5px 5px 5px; margin-bottom:5px">INSERT PRODUCTS</h3>
         <!--Form-->
-        <form action="" method="post" enctype="multipart/form-data" class="bg-primary">
-            <div class="form-outline mb-2 w-50 m-auto">
+        <form action="" method="post" enctype="multipart/form-data" style="background-color:#ffbc7e;color:#fff; width:100%;">
+            <div class="form-outline mb-0 m-auto" style="padding: 15px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
                 <!--Title-->
-                <label for="product_title" class="form-label text-light mt-2">Product Title</label>
+                
                 <input type="text" name="product_title" id="product_title" class="form-control" placeholder="Enter product title" autocomplete="off" required="required">
             </div>
             <div> 
                 <!--Description-->
-                <div class="form-outline mb-2 w-50 m-auto">
-                <label for="description" class="form-label text-light">Product Description</label>
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                
                 <input type="text" name="description" id="description" class="form-control" placeholder="Enter description" autocomplete="off" required="required">
             
             </div>
             <div> 
                 <!--keyword-->
-                <div class="form-outline mb-3 w-50 m-auto">
-                <label for="product_keywords" class="form-label text-light">Product Keywords</label>
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                
                 <input type="text" name="product_keywords" id="product_keywords" class="form-control" placeholder="Enter product keyword" autocomplete="off" required="required">
             </div>  
             <div> 
                 <!--categories-->
-                <div class="form-outline mb-3 w-50 m-auto">
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
                     <select name="product_category" id="" class="form-select">
                         <option value="">Select Category</option>
                         <?php 
@@ -107,7 +107,7 @@ if(isset($_POST['insert_product'])){
             </div>
             <div> 
                 <!--Brands-->
-                <div class="form-outline mb-3 w-50 m-auto">
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
                     <select name="product_brands" id="" class="form-select">
                         <option value="">Select Brand</option>
                         <?php 
@@ -130,32 +130,32 @@ if(isset($_POST['insert_product'])){
             </div>
             <div> 
                 <!--Image 1-->
-                <div class="form-outline mb-3 w-50 m-auto">
-                <label for="product_image1" class="form-label text-light">Product Image 1</label>
+                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_image1" class="form-label text-dark">Insert Image 1</label>
                 <input type="file" name="product_image1" id="product_image1" class="form-control"  required="required">
             </div>  
             <div> 
                 <!--Image 2-->
-                <div class="form-outline mb-3 w-50 m-auto">
-                <label for="product_image2" class="form-label text-light">Product Image 2</label>
+                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_image2" class="form-label text-dark">Insert Image 2</label>
                 <input type="file" name="product_image2" id="product_image2" class="form-control"  required="required">
             </div> 
             <div> 
                 <!--Image 3-->
-                <div class="form-outline mb-3 w-50 m-auto">
-                <label for="product_image3" class="form-label text-light">Product Image 3</label>
+                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_image3" class="form-label text-dark">Insert Image 3</label>
                 <input type="file" name="product_image3" id="product_image3" class="form-control"  required="required">
             </div> 
             <div> 
                 <!--price-->
-                <div class="form-outline mb-3 w-50 m-auto">
-                <label for="product_price" class="form-label text-light">Product Price</label>
+                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_price" class="form-label text-dark">Product Price</label>
                 <input type="text" name="product_price" id="product_price" class="form-control" placeholder="Enter product price" autocomplete="off" required="required">
             </div> 
             <div> 
                 <!--BUTTON INSERT PRODUCT-->
-                <div class="form-outline mb-4 w-50 m-auto">
-                <input type="submit" name="insert_product" class="btn btn-info mb-2 px-3" value="Insert Products">
+                <div class="form-outline mb-4 m-auto" style="padding: 5px 5px 5px 5px; width:50%; display:block; margin-left:auto; margin-right:auto;">
+                <input type="submit" name="insert_product" class="btn mb-2 px-3" value="Insert Products" style="padding: 5px 5px 5px 5px; width:50%; display:block; margin-left:auto; margin-right:auto;background-color:#ff571d;color:#fff;">
                 
             </div>    
              
