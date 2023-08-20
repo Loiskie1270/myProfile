@@ -56,15 +56,16 @@ body{
 
 }
 .card-img-top{
-  position: absolute;
-  display: flex;
-  margin-left: -30px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 5px 5px 5px 5px;
-  width: 50%;
-  height: 40%;
-  filter: drop-shadow(2px 2px 5px white);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  width: 40%;
+  height: 30%;
+  margin-top: 10px;
+  filter: drop-shadow(2px 2px 5px black);
   /*mix-blend-mode: multiply;*/
   /*filter: contrast(1);*/
 }
@@ -73,41 +74,89 @@ body{
   padding: 5px 10px ;
   height: 97%;
   width: 97%;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: -55px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  column-gap: 2px;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  column-gap: 1px;
   caret-color: transparent;
 }
+
+.card .btn{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
 .card-title{
-  text-align: right;
-  margin-right: -5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   font-weight: bold;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: normal;
 }
 .card-text{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.card-text-price{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.5;
   font-size: 15px;
-  margin-top: 20px;
-  margin-bottom: 1px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   font-weight: bold;
+}
+
+.btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 50%;
+  border-radius: 3px;
+}
+.nav-link{
+  color:#333;
+  font-family: 'Poppins', sans-serif;
+}
+.nav-item .nav-link{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.nav-link:hover{
+  font-weight: bold;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
 }
 .fa-stack[data-count]:after{
   text-decoration: none;
   position:absolute;
   right:20%;
-  left: 24px;
-  top: 5px;
+  left: 25px;
+  top: -2px;
   content: attr(data-count);
   padding:.5em;
   border-radius:999px;
   line-height:.70em;
-  color: white;
+  color: rgb(255,165,0);
   text-align:center;
   min-width:2em;
-  font-weight:bold;
-  background: #799cf0;
+  font-weight:normal;
+  background: #fff;
   font-size: 12px;
 }
+
 .fa-circle {
   color:white;
 }
@@ -155,7 +204,7 @@ body{
     box-shadow: 10px 25px 30px rgba(30,30,200,0.3);
 }
 .slider{
-  width: 100%;
+    width: 100%;
     display: flex;
     animation: slide 6s infinite;
 }
@@ -240,7 +289,270 @@ img{
     color: blue;
   }
 }
+.navbar-toggler:focus {
+    /*Below line will remove the border from the icon
+    I have used bootstrap icon here */
+    /* This will only remove the shadow effect */
+    /* Border is still there */
+    /* if you don't want any border then set the property equals to zero */
+    border: 0 !important;
+    box-shadow: none !important;
+  
+    /* This will remove the rounded corner(radious-border)
+    and give square border */
+    /* border-radius: 0 !important; */    
+}
 
+.navbar-toggler {
+    /* This will completely remove border from the icon */
+    /* If you need border for the icon then comment this code */
+     border: 0 !important;
+
+    /* if you want to check the border please uncomment below code */
+    /* border-color: yellow !important; */
+}
+@media (max-width: 640px) {
+        .banner {
+          flex-direction: column;
+        }
+      }
+
+        .banner {
+        border-radius: 5px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .clm {
+        margin: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clm img {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+/*
+---------------------------------------------
+features
+---------------------------------------------
+*/
+
+#features {
+  margin-bottom: 80px;
+}
+
+.feature-item {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.feature-item .left-icon img {
+  float: left;
+  margin-right: 30px;
+}
+
+.feature-item .right-content {
+  display: inline;
+}
+
+.feature-item .right-content h4 {
+  margin-top: 0px;
+  margin-bottom:  7px;
+  letter-spacing: 0.25px;
+  color: #232d39;
+  font-size: 19px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.feature-item .right-content a.text-button {
+  margin-top: 7px;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ed563b;
+  font-weight: 500;
+}
+@media screen and (max-width: 1200px) {
+
+.popup.popup-content, h5 p.text {
+
+font-size: 10px;
+}
+}
+      .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .popup .left-side .details .text-one,
+        .popup .left-side .details .text-two {
+          font-size: 14px;
+          color: #fff;
+        }
+        .popup-info .popup-info .right-side{
+          width: 75%;
+          margin-left: 75px;
+        }
+        .popup-info .right-side .topic-text{
+          font-size: 23px;
+          font-weight: 600;
+          color: #fff;
+        }
+        .right-side .input-box{
+           height: 50px; 
+           width: 100%;
+        }
+        .right-side .input-box input{
+          height: 100%;
+          width: 100%;
+        }
+/**FOR FREQUENTLY ASKED QUESTION*****/        
+
+        .popup .tab label::after{
+          content: '+';
+          position: absolute;
+          right: 20px;
+          font-size: 2em;
+          color: rgba(0,0,0,0.1);
+          transition: transform 1s;
+        }
+        .popup .tab:hover label::after{
+          color: #333;
+        }
+        .popup .tab input:checked ~ label::after{
+          transform: rotate(135deg);
+          color: #fff;
+        }
+        .popup .tab input:checked ~ label h3{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          color: rgba(255,255,255,0.2);
+          font-size: 8em;
+          justify-content: flex-end;
+          padding: 20px;
+          color: #fff;
+        }
+        .popup .tab input:checked ~ label h4{
+          background: #fff;
+          padding: 2px 10px;
+          color: #333;
+          border-radius: 2px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .popup .tab input:checked ~ .content-faq p{
+          background: #fff;
+          color: #333;
+          padding: 2px 10px;
+          border-radius: 2px;
+        }
+        .popup .tab:hover label::after{
+          color: #fff;
+        }
+        .popup .tab label h3{
+          width: 40px;
+          height: 40px;
+          background: #ff571d;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-size: 1.25em;
+          border-radius: 5px;
+          margin-right: 10px;
+
+        }
+        .popup .tab:nth-child(2) label h3{
+          background: linear-gradient(135deg,#ff571d,purple);
+        }
+        .popup .tab:nth-child(3) label h3{
+          background: linear-gradient(135deg,#ff571d,purple);
+        }
+        .popup .tab:nth-child(4) label h3{
+          background: linear-gradient(135deg,#ff571d,purple);
+        }
+        .popup .tab:nth-child(5) label h3{
+          background: linear-gradient(135deg,#ff571d,purple);
+        }
+        
+        .popup .tab label h4{
+          position: relative;
+          font-weight: 500;
+          color: #333;
+          z-index: 10;
+        }
+        .popup .tab .content-faq{
+          max-height: 0;
+          transition: 1s;
+          overflow: hidden;
+        }
+        .popup .tab input:checked ~ .content-faq{
+          max-height: 100vh;
+        }
+        .popup .tab .content-faq p{
+          position: relative;
+          padding: 10px 0;
+          color: #333;
+          z-index: 10;
+        }
+
+/**END OF FREQUENTLY ASKED QUESTION*****/   
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 30%;
+            font-weight: bolder;
+        }
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+        .show {
+            display: block;
+        }
+        h1 {
+            color: green;
+        }
+@media (min-width:400px) and (max-width: 820px){
+    .popup{
+      margin: 40px 0;
+      height: 100%;
+    }
+    .popup .popup-info{
+      flex-direction: column-reverse;
+    }
+    .popup .popup-info .left-side{
+      width: 100%;
+      font-size:25px;
+      flex-direction: row;
+      margin-top: 35px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .popup .popup-info .right-side{
+      width: 100%;
+      margin-left: 0;
+    }
+} 
+       
+
+  
 </style>
     
   </head>
@@ -263,19 +575,19 @@ img{
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php"><strong>Home</strong></a>
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="display_all.php"><strong>Products</strong></a>
+          <a class="nav-link" href="display_all.php">Products</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><strong>Register</strong></a>
+          <a class="nav-link" href="#">Register</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><strong>Contact Us</strong></a>
+          <a class="nav-link" href="#">Contact Us</a>
         </li>
 
         <li class="nav-item">
@@ -283,7 +595,7 @@ img{
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#"  style="margin-left:15px; font-weight:bold; margin-top:-7px">Total Price: <font size="+2">₱ <?php total_cart_price();?></font></a> 
+          <a class="nav-link text-dark" href="#" style="margin-left:15px;"><span>Total Price: <font size="+1"><strong>₱ <?php total_cart_price();?></strong></font></span></a> 
         </li>
 
       </ul>
@@ -310,7 +622,7 @@ cart();
     <?php 
              if(!isset($_SESSION['username'])){
               echo "<li class='nav-item'>
-              <a class='nav-link text-dark' href='#'><strong>Welcome Guest</strong></a>
+              <a class='nav-link text-dark' href='#'>Welcome Guest</a>
         </li>";
             }else{
               echo "<li class='nav-item'>
@@ -319,7 +631,7 @@ cart();
            }   
 if(!isset($_SESSION['username'])){
   echo "<li class='nav-item'>
-  <a class='nav-link text-light' href='./user_area/user_login.php'><strong>Logout</strong></a>
+  <a class='nav-link text-light' href='./user_area/user_login.php'>Logout</a>
 </li>";
 }else{
   echo "<li class='nav-item'>
@@ -395,9 +707,9 @@ get_uniqe_brands();
 
         <ul class="navbar-nav me-auto mt-2 mb-0 text-center">
 
-            <li class="nav-item" style="background-color: #f5ffcf; color:green; font-family: 'Poppins', sans-serif; font-size: 17px; border-bottom: 1px solid #D3D3D3; border-top: 1px solid #D3D3D3">
-            <a href="#" class="nav-link text-decoration-none">BRANDED</a>
-            </li>
+          <li class="nav-item" style="background-color: #f5ffcf; color:green; font-family: 'Poppins', sans-serif; font-size: 17px; border-bottom: 1px solid #D3D3D3; border-top: 1px solid #D3D3D3">
+           <a href="#" class="nav-link text-decoration-none">Botika Choice</a>
+          </li>
 
       <?php 
  getbrands();
@@ -416,11 +728,11 @@ get_uniqe_brands();
 
         ?>
         </ul>
-        <ul class="navbar-nav m-auto text-bg-info text-center">
+        <ul class="navbar-nav m-auto text-center">
 
 <!--categories to be displayed -->
-            <li class="nav-item mb-0" style="background-color: #f5ffcf; color:green; font-family: 'Poppins', sans-serif; font-size: 17px; border-bottom: 1px solid #D3D3D3; border-top: 1px solid #D3D3D3">
-            <a href="#" class="nav-link text-decoration-none">Generics</a>
+<li class="nav-item mb-0" style="background-color: #f5ffcf; color:green; font-family: 'Poppins', sans-serif; font-size: 17px; border-bottom: 1px solid #D3D3D3; border-top: 1px solid #D3D3D3">
+            <a href="#" class="nav-link text-decoration-none">Categories</a>
             </li>
         <?php 
 

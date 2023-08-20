@@ -51,7 +51,6 @@ body{
   width: 110px;
   margin-left: 3px;
   margin-right: 3px;
-  filter: drop-shadow(5px 5px 10px white);
 }
 .card-img-top{
   position: absolute;
@@ -78,6 +77,11 @@ body{
   column-gap: 2px;
   caret-color: transparent;
 }
+.card .btn{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  border-radius: 5px;
+}
 .card-title{
   text-align: right;
   margin-right: -5px;
@@ -93,17 +97,17 @@ body{
   text-decoration: none;
   position:absolute;
   right:20%;
-  left: 24px;
-  top: 5px;
+  left: 25px;
+  top: -2px;
   content: attr(data-count);
   padding:.5em;
   border-radius:999px;
   line-height:.70em;
-  color: white;
+  color: rgb(255,165,0);
   text-align:center;
   min-width:2em;
-  font-weight:bold;
-  background: #799cf0;
+  font-weight:normal;
+  background: #fff;
   font-size: 12px;
 }
 .fa-circle {
@@ -180,13 +184,13 @@ cart();
 ?>
 
 <!--second Child -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:101%">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%">
   <ul class="navbar nav me-auto">
     
           <?php 
           if(!isset($_SESSION['username'])){
             echo "<li class='nav-item'>
-            <a class='nav-link text-dark' href='#'><strong>Welcome Guest</strong></a>
+            <a class='nav-link text-dark' href='#'>Welcome Guest</a>
           </li>";
           }else{
             echo "<li class='nav-item'>
@@ -207,7 +211,7 @@ if(!isset($_SESSION['username'])){
   </ul>
 </nav>
 <!--third child -->
-<div class="container-image" style="background-color: #ff571d; padding:10px; width:101%">
+<div class="container-image" style="background-color: #ff571d; padding:10px; width:100%">
 <p style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-2px;  margin-left: -9px; font-size: 15px">GARANTISADO&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;GAMOT&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;BAGO</p>
   <!--<img src="images/pebslogo4.png" alt="" class="logo_img">-->
 </div>

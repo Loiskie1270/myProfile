@@ -39,6 +39,7 @@ session_start();
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap');  
 
 body{
   text-shadow: 0px 0px 1px #fff;
@@ -59,67 +60,118 @@ body{
   width: 110px;
   margin-left: 3px;
   margin-right: 3px;
-  filter: drop-shadow(5px 5px 10px white);
 
 }
-.card-img-top{
-  position: absolute;
-  display: flex;
-  margin-left: -30px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 5px 5px 5px 5px;
-  width: 50%;
-  height: 40%;
-  filter: drop-shadow(2px 2px 5px white);
-  /*mix-blend-mode: multiply;*/
-  /*filter: contrast(1);*/
-}
+
 .card{
   box-shadow: 0px 0px 2px 2px lightgray;
+  background-color: #fffef8;
   padding: 5px 10px ;
   height: 97%;
   width: 97%;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: -55px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  column-gap: 2px;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  column-gap: 1px;
   caret-color: transparent;
 }
+
+.card .btn{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.card-img-top{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  width: 40%;
+  height: 50%;
+  margin-top: 5px;
+  filter: drop-shadow(2px 1px 2px grey);
+  /*mix-blend-mode: multiply;*/
+  /*filter: contrast(1);*/
+}
+
 .card-title{
-  text-align: right;
-  margin-right: -5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-top: 5px;
   font-weight: bold;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: normal;
 }
 .card-text{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.card-text-price{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.5;
   font-size: 15px;
-  margin-top: 20px;
-  margin-bottom: 1px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
+
+.btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 50%;
+  border-radius: 3px;
+}
+.nav-link{
+  color:#333;
+  font-family: 'Poppins', sans-serif;
+}
+.nav-item .nav-link{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-link:hover{
+  font-weight: bold;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+}
+
 .fa-stack[data-count]:after{
   text-decoration: none;
   position:absolute;
   right:20%;
-  left: 24px;
-  top: 5px;
+  left: 25px;
+  top: -2px;
   content: attr(data-count);
   padding:.5em;
   border-radius:999px;
   line-height:.70em;
-  color: white;
+  color: rgb(255, 0, 0);
   text-align:center;
   min-width:2em;
-  font-weight:bold;
-  background: #799cf0;
+  font-weight:600;
+  background: #fff;
   font-size: 12px;
 }
 .fa-circle {
   color:white;
 }
 .red-cart {
-
   color: white; background:#DF0000;
 }
 .footer{
@@ -162,9 +214,10 @@ body{
     box-shadow: 10px 25px 30px rgba(30,30,200,0.3);
 }
 .slider{
-  width: 100%;
+    
+    width: 100%;
     display: flex;
-    animation: slide 6s infinite;
+    animation: slide 3s infinite;
 }
 @keyframes slide{
     0%{
@@ -217,34 +270,34 @@ img{
     color: white;
   }
   10% {
-    color: blue;
+    color: #fffef8;
   }
   20% {
-    color: green;
+    color: #fff6d2;
   }
   30% {
-    color: blue;
+    color: #fffef8;
   }
   40% {
     color: white;
   }
   50% {
-    color: blue;
+    color: #fff6d2;
   }
   60% {
     color: white;
   }
   70% {
-    color: blue;
+    color: #fffefa;
   }
   80% {
-    color: green;
+    color: #fff6d2;
   }
   90% {
     color: white;
   }
   100% {
-    color: blue;
+    color: #fffef8;
   }
 }
 .navbar-toggler:focus {
@@ -404,24 +457,28 @@ font-size: 10px;
           justify-content: flex-end;
           padding: 20px;
           color: #fff;
+          margin-top: 0;
         }
         .popup .tab input:checked ~ label h4{
-          background: #fff;
+          background-color: #ff571d;
           padding: 2px 10px;
-          color: #333;
+          color: #fff;
           border-radius: 2px;
           box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          opacity: 1;
         }
         .popup .tab input:checked ~ .content-faq p{
-          background: #fff;
-          color: #333;
+          background-color: #ff571d;
+          color: #fff;
           padding: 2px 10px;
           border-radius: 2px;
+          opacity:1;
         }
         .popup .tab:hover label::after{
           color: #fff;
         }
         .popup .tab label h3{
+          margin-top: 15px;
           width: 40px;
           height: 40px;
           background: #ff571d;
@@ -508,9 +565,6 @@ font-size: 10px;
       margin-left: 0;
     }
 } 
-       
-
-  
 
 </style>
   </head>
@@ -534,10 +588,10 @@ font-size: 10px;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php"><strong>Home</strong></a>
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="display_all.php"><strong>Products</strong></a>
+          <a class="nav-link" href="display_all.php">My Pharmacy</a>
         </li>
 
         <?php 
@@ -547,22 +601,22 @@ echo "<li class='nav-item'>
 </li>"; 
   }else{
     echo "<li class='nav-item'>
-    <a class='nav-link' href='./user_area/user_registration.php'><strong>Register</strong></a>
+    <a class='nav-link' href='./user_area/user_registration.php'>Register</a>
     </li>"; 
   }
  
 ?>
         
         <li class="nav-item">
-          <a class="nav-link" href="./user_area/contact.php"><strong>Contact Us</strong></a>
+          <a class="nav-link" href="./user_area/contact.php">Contact Us</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart"></i><strong><sup></sup></strong></a>
+          <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart" style="font-size:15px;margin-left:-3px;"></i><sup></sup></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#" style="margin-left:15px; font-weight:bold; margin-top:-7px"><span>Total Price: <font size="+2">₱ <?php total_cart_price();?></font></span></a> 
+          <a class="nav-link" href="#" style="margin-left:15px;font-family: 'Poppins', sans-serif;margin-top:-3px;"><span>Total Price: <font size="+1"><strong>₱ <?php total_cart_price();?></strong></font></span></a> 
         </li>
         
       </ul>
@@ -583,14 +637,14 @@ cart();
 
 <!--second Child -->
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:101%">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%">
 
   <ul class="navbar nav me-auto">
     
     <?php
                if(!isset($_SESSION['username'])){
                 echo "<li class='nav-item'>
-                <a class='nav-link text-dark' href='#'><strong>Welcome Guest</strong></a>
+                <a class='nav-link text-dark' href='#'>Welcome Guest</a>
               </li>";
               }else{
                 echo "<li class='nav-item'>
@@ -599,7 +653,7 @@ cart();
               }   
 if(!isset($_SESSION['username'])){
   echo "<li class='nav-item'>
-  <a class='nav-link text-light' href='./user_area/user_login.php'><strong>Login</strong></a>
+  <a class='nav-link text-light' href='./user_area/user_login.php'>Login</a>
 </li>";
 }else{
   echo "<li class='nav-item'>
@@ -613,9 +667,9 @@ if(!isset($_SESSION['username'])){
 
 <!--third child -->
 
-<div class="container-image" style="background-color: #ff571d; padding:20px; width:101%; position : sticky; ">
+<div class="container-image" style="background-color: #ff571d; padding:20px; width:100%; position : sticky; ">
    
-   <p class="awesome" style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-22px;  margin-left: -14px; font-size:15px; position : sticky; ">GARANTISADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAMOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;BAGO</p>
+   <p class="awesome" style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-22px; margin-left: -14px; font-size:15px; position : sticky; ">GARANTISADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAMOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;BAGO</p>
 </div>
 
 <!--fourth child -->
@@ -676,7 +730,7 @@ get_uniqe_brands();
         <ul class="navbar-nav me-auto mt-0 mb-0 text-center">
 
             <li class="nav-item" style="background-color: #f5ffcf; color:green; font-family: 'Poppins', sans-serif; font-size: 17px; border-bottom: 1px solid #D3D3D3; border-top: 1px solid #D3D3D3">
-           <a href="#" class="nav-link text-decoration-none">Branded</a>
+           <a href="#" class="nav-link text-decoration-none">Botika Choice</a>
             </li>
       <?php 
 
@@ -689,7 +743,7 @@ get_uniqe_brands();
 <!--categories to be displayed -->
 
             <li class="nav-item mb-0" style="background-color: #f5ffcf; color:green; font-family: 'Poppins', sans-serif; font-size: 17px; border-bottom: 1px solid #D3D3D3; border-top: 1px solid #D3D3D3">
-            <a href="#" class="nav-link text-decoration-none">Generics</a>
+            <a href="#" class="nav-link text-decoration-none">Categories</a>
             </li>
         <?php 
 
@@ -702,7 +756,8 @@ getcategories();
   </div>
     </div>
     <div style="background-color: #ff571d; padding:10px; width:101%; position : sticky; caret-color:transparent" id="information">
-        <p style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-2px;  margin-left: -14px; font-size:15px; color: white; position : sticky;"><a href="#information" style="color: white; text-decoration:none" id="myButton7">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#information" style="color: white; text-decoration:none" id="myButton8">FAQ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>&#x26AB;&nbsp;&nbsp;&nbsp;<a href="#information" style="color: white; text-decoration:none" id="myButton9">Contact</a></p>
+  
+        <p class="about" style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-2px;  margin-left: -14px; font-size:15px; color: white; position : sticky;"><a href="#information" style="color: white; text-decoration:none" id="myButton7">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#information" style="color: white; text-decoration:none" id="myButton8">FAQ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>&#x26AB;&nbsp;&nbsp;&nbsp;<a href="#information" style="color: white; text-decoration:none" id="myButton9">Contact</a></p>
     </div>
 
     <!--Image slider---->    
@@ -736,7 +791,7 @@ getcategories();
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading" style="margin-top: 10%;">
-                        <h2 style="font-size: 25px; color: #FFFFFF; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);background-image: linear-gradient(to right, red , orange);width: 55%; margin-left: auto; margin-right: auto; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center;text-align:center; position: sticky; margin-bottom: 50px; padding: 10px 5px; border-radius: 3px">Your Daily Guide</h2>
+                        <h2 style="font-family: 'Poppins', sans-serif;font-size: 20px; color: #FFFFFF; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);background-image: linear-gradient(to right, red , orange);width: 55%; margin-left: auto; margin-right: auto; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center;text-align:center; position: sticky; margin-bottom: 50px; padding: 10px 15px; border-radius: 3px">Your Daily Guide</h2>
                         
                     </div>
                 </div>
@@ -747,24 +802,29 @@ getcategories();
                                 <img src="./images/headache.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="First One">
                             </div>
                             <div class="right-content">
-                                <h4>Headache</h4>
-                                <p style="color: grey; margin-bottom:5px">Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
-                                <a href="#features" class="text-button" id="myButton">Discover More</a>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Headache</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">Headache has variety of type & should not neglected, we suggest early intervention save lives.</p>
+                                <a href="#features" class="text-button" id="myButton"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP WINDOW--->         
 
                             <div id="myPopup" class="popup">
-                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px">
-                                  <h5 style="color:#ff571d; margin-left: 15px; text-align:left">
-                                        HEADACHE 
-                                        <br><br>
-                                          <img src="./images/br5.png" alt="" style="float: left; margin-left: 25px; margin-right: 10px; width:180px; margin-bottom:40px">
-                                          <p style="font-size:12px; line-height: 1; margin-left:40px margin-right20px; text-align:justify; color:grey">the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog;</p>
-                                    </h5>
+                            <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                        HEADACHE
+                                        <br>
+                                        <img src="./images/headachetwo.png" alt="" style="width:35%;display:block;margin-right:auto;margin-left:auto; margin-top:20px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+
+                                          <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Headache causes many things and should not be neglected that might cause harm or fatal to your patient.</p>
+
+                                          <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">There are many different types of headaches, so identifying the location and nature of your pain can help determine the cause.
+                                          Some of the most common types include:</p>
+    
+                                   </h5>
                                   
                                   <button id="closePopup" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
-                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:-50px; margin-right:5px; padding:0px 0px 0px 0px"></i></a>
+                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:5px; margin-right:3px; padding:0px 0px 0px 0px"></i></a>
                                     </button>
                                 </div>
                              </div>
@@ -775,24 +835,25 @@ getcategories();
                                 <img src="./images/highblood.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="second one">
                             </div>
                             <div class="right-content">
-                                <h4>High Blood Pressure</h4>
-                                <p style="color: grey; margin-bottom:5px">If you wish to support TemplateMo website via PayPal, please feel free to contact us. We appreciate it a lot.</p>
-                                <a href="#features" class="text-button" id="myButton2">Discover More</a>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">High Blood Pressure</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">High blood pressure if negleted will caused fatal to the patient, we recommend to visit nearest clinic or hospital for better treatment.</p>
+                                <a href="#features" class="text-button" id="myButton2"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP2 WINDOW--->  
 
                             <div id="myPopup2" class="popup">
-                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px">
-                                  <h5 style="color:#ff571d; margin-left: 15px; text-align:left">
+                              <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
                                         HIGH BLOOD PRESSURE
-                                        <br><br>
-                                        <img src="./images/br5.png" alt="" style="float: left; margin-left: 25px; margin-right: 10px; width:180px; margin-bottom:40px">
-                                        <p style="font-size:12px; line-height: 1; margin-left:40px margin-right20px; text-align:justify; color:grey">the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog;</p>
+                                        <br>
+                                        <img src="./images/highbloodtwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">If you have high blood pressure, you must know that what your daily meal can make a difference. You must follow strict diet like the dietary approaches to stop hypertension...</p>
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Many people out there, taking their blood pressure anywhere is a crucial step in monitoring their health, wearing smart watches reduce difficulty to monitor bp. It’s essential to get an accurate reading, but there...</p>
                                     </h5>
                                   
                                   <button id="closePopup2" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
-                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:-50px; margin-right:5px; padding:0px 0px 0px 0px"></i></a>
+                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:5px; margin-right:3px; padding:0px 0px 0px 0px;"></i></a>
                                     </button>
                                 </div>
                             </div>
@@ -803,23 +864,24 @@ getcategories();
                                 <img src="./images/muscleproblem.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="third gym training">
                             </div>
                             <div class="right-content">
-                                <h4>Muscle Problem</h4>
-                                <p style="color: grey; margin-bottom:5px">Credit goes to <a rel="nofollow" href="#" target="_blank"></a> for images and video background used in this HTML template.</p>
-                                <a href="#features" class="text-button" id="myButton3">Discover More</a>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Muscle Problem</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">As we reach a certain age muscle meet various problems, this is the reason regular visit to your doctor is highly recommended.</p>
+                                <a href="#features" class="text-button" id="myButton3"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP3 WINDOW--->                              
                             <div id="myPopup3" class="popup">
-                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px">
-                                  <h5 style="color:#ff571d; margin-left: 15px; text-align:left">
+                              <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
                                         MUSCLE PROBLEM
-                                        <br><br>
-                                        <img src="./images/br5.png" alt="" style="float: left; margin-left: 25px; margin-right: 10px; width:180px; margin-bottom:40px">
-                                        <p style="font-size:12px; line-height: 1; margin-left:40px margin-right20px; text-align:justify; color:grey">the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog;</p>
+                                        <br>
+                                        <img src="./images/muscleproblemtwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Your limbs contain different compartments, which are sets of muscles, nerves, and blood vessels that are covered by a tough tissue called fascia. If you experience swelling or bleeding within one of these compartments, the pressure can lead to great discomfort in your muscles.</p>
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">The muscles in your body are surrounded by fascia, which is a tough connective tissue. With myofascial pain syndrome (MFS), this tissue becomes inflamed, which can lead to considerable discomfort in your muscles. </p>
                                     </h5>
                                  
                                   <button id="closePopup3" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
-                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:-50px; margin-right:5px; padding:0px 0px 0px 0px"></i></a>
+                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:5px; margin-right:3px; padding:0px 0px 0px 0px;"></i></a>
                                     </button>
                                 </div>
                             </div>
@@ -834,24 +896,24 @@ getcategories();
                                 <img src="./images/childmedicine.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="fourth muscle">
                             </div>
                             <div class="right-content">
-                                <h4>Child Medicine</h4>
-                                <p style="color: grey; margin-bottom:5px">This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.</p>
-                                <a href="#features" class="text-button" id="myButton4">Discover More</a>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Child Medicine</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">Many parents are concerned about their child health way better than neglecting your child;s health.</p>
+                                <a href="#features" class="text-button" id="myButton4"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP4 WINDOW--->     
 
                             <div id="myPopup4" class="popup">
-                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px">
-                                  <h5 style="color:#ff571d; margin-left: 15px; text-align:left">
-                                        Child Medicine
-                                        <br><br>
-                                        <img src="./images/br5.png" alt="" style="float: left; margin-left: 25px; margin-right: 10px; width:180px; margin-bottom:40px">
-                                        <p style="font-size:12px; line-height: 1; margin-left:40px margin-right20px; text-align:justify; color:grey">the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog;</p>
+                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                        CHILD MEDICINE
+                                        <br>
+                                        <img src="./images/childrenmedicinetwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Although most of the Child Health blog is aimed at parenting topics, it also includes information on child psychology, before-birth tips, growth and development and much more. There are articles on child abuse, nurturing, nursing, seasonal flu, childhood diseases, pollution, childhood eating disorders and nutrition. The Child Health blog even includes recipes for children. It also includes a special section for all things children that include articles on newborn babies, school issues and teenagers.</p>
                                     </h5>
                                   
                                   <button id="closePopup4" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
-                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:-50px; margin-right:5px; padding:0px 0px 0px 0px"></i></a>
+                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:5px; margin-right:3px; padding:0px 0px 0px 0px;"></i></a>
                                     </button>
                                 </div>
                             </div>
@@ -863,24 +925,24 @@ getcategories();
                                 <img src="./images/motherguide.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="training fifth">
                             </div>
                             <div class="right-content">
-                                <h4>Mother's Guide</h4>
-                                <p style="color: grey; margin-bottom:5px">This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.</p>
-                                <a href="#features" class="text-button" id="myButton5">Discover More</a>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Mother's Guide</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">Social media helped many mother as guide to their children's health way better than the old days, feel free to message us for more information.</p>
+                                <a href="#features" class="text-button" id="myButton5"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP5 WINDOW--->     
 
                             <div id="myPopup5" class="popup">
-                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px">
-                                  <h5 style="color:#ff571d; margin-left: 15px; text-align:left">
-                                        Mother's Guide
+                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                        MOTHER'S GUIDE
                                         <br><br>
-                                        <img src="./images/br5.png" alt="" style="float: left; margin-left: 25px; margin-right: 10px; width:180px; margin-bottom:40px">
-                                        <p style="font-size:12px; line-height: 1; margin-left:40px margin-right20px; text-align:justify; color:grey">the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog;</p>
+                                        <img src="./images/motherguidetwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">The Mothers Guide received some encouraging feedback from visitors to the event, most of whom were seeing it for the first time. Dr Spiro commented: “There was lots of interest and everyone seemed to like the new guide. I think it is brilliant that you have the new ‘laid-back feeding’ included.”</p>
                                     </h5>
                                   
                                   <button id="closePopup5" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
-                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:-50px; margin-right:5px; padding:0px 0px 0px 0px"></i></a>
+                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:5px; margin-right:3px; padding:0px 0px 0px 0px;"></i></a>
                                     </button>
                                 </div>
                             </div>
@@ -891,24 +953,24 @@ getcategories();
                                 <img src="./images/br5.png" style="width:21%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="gym training">
                             </div>
                             <div class="right-content">
-                                <h4>Branded & Generics</h4>
-                                <p style="color: grey; margin-bottom:5px">Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.</p>
-                                <a href="#features" class="text-button" id="myButton6">Discover More</a>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Branded & Generics</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">This web app will suggest about branding such as branded and generics, simply send a message us and we will do our very best to answer your query.</p>
+                                <a href="#features" class="text-button" id="myButton6"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP6 WINDOW--->    
 
                             <div id="myPopup6" class="popup">
-                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px">
-                                  <h5 style="color:#ff571d; margin-left: 15px; text-align:left">
-                                        Branded & Generics
+                                <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                        BRANDED & GENERICS
                                         <br><br>
-                                        <img src="./images/br5.png" alt="" style="float: left; margin-left: 25px; margin-right: 10px; width:180px; margin-bottom:40px">
-                                        <p style="font-size:12px; line-height: 1; margin-left:40px margin-right20px; text-align:justify; color:grey">the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog; the quick brown fox jump over the lazy dog;</p>
+                                        <img src="./images/brandedgenericstwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">When a new drug is discovered, the company that discovered it would apply for patency to prevent other companies from producing and selling the drug. This patency may take up to 20 years and during this period, the company will produce and sell the drug under a brand name to recover its investment and make a profit. With time, this name becomes synonymous with the drug. But after the patency expires, other companies are allowed to produce a similar drug. It is what gave rise to brand and generic name in drugs.</p>
                                     </h5>
                                  
                                   <button id="closePopup6" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
-                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:-50px; margin-right:5px; padding:0px 0px 0px 0px"></i></a>
+                                  <a href="#features" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="background-color:#fff;color:#ff571d; border:none; text-decoration:none; width:5px; margin-bottom:5px; margin-right:3px; padding:0px 0px 0px 0px;"></i></a>
                                     </button>
                                 </div>
                             </div>
@@ -933,9 +995,6 @@ getcategories();
                                         </div>
                                       </section>
                                     </div>
-
-
-
                                       
                                     </div>
                                  
@@ -960,10 +1019,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc1" style="appearance:none; ">
                                         <label for="acc1" style="display:flex; align-items:center; cursor:pointer; ">
                                           <h3>01</h3>
-                                          <h4 style="font-size:15px; font-weight:bold;">May i know your exact location?</h4>
+                                          <h4 style="font-size:15px;">May i know your exact location?</h4>
                                         </label>
 
-                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif; color:#fff;color:#333">I want to visit your place and i want to see all products available there, may i know where we can find your pharmacy? Thank you</p>
+                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif;">I want to visit your place and i want to see all products available there, may i know where we can find your pharmacy? Thank you</p>
                                         </div>
 
                                       </div>
@@ -973,10 +1032,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc2" style="appearance:none; ">
                                         <label for="acc2" style="display:flex; align-items:center; cursor:pointer;">
                                           <h3>02</h3>
-                                          <h4 style="font-size:15px; font-weight:bold;">Is Generic a good medicine?</h4>
+                                          <h4 style="font-size:15px;">Is Generic a good medicine?</h4>
                                         </label>
 
-                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif; color:#fff;color:#333">Will you please suggest to your customer's any information about generics? as customer your suggestion is highly appreciated.</p>
+                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif;">Will you please suggest to your customer's any information about generics? as customer your suggestion is highly appreciated.</p>
                                         </div>
 
                                       </div>
@@ -986,10 +1045,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc3" style="appearance:none; ">
                                         <label for="acc3" style="display:flex; align-items:center; cursor:pointer;">
                                           <h3>03</h3>
-                                          <h4 style="font-size:15px; font-weight:bold;">What is your thought about branded and generic medicine?</h4>
+                                          <h4 style="font-size:15px;">What is your thought about branded and generic medicine?</h4>
                                         </label>
 
-                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif; color:#fff;color:#333">As pharmay owner what is your recommendation to your client regarding usage of branded and generic medicine. Your response is highly appreciated.</p>
+                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif;">As pharmay owner what is your recommendation to your client regarding usage of branded and generic medicine. Your response is highly appreciated.</p>
                                         </div>
 
                                       </div>
@@ -999,10 +1058,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc4" style="appearance:none; ">
                                         <label for="acc4" style="display:flex; align-items:center; cursor:pointer;">
                                           <h3>04</h3>
-                                          <h4 style="font-size:15px; font-weight:bold;">Would you suggest any medication for my headache?</h4>
+                                          <h4 style="font-size:15px;">Would you suggest any medication for my headache?</h4>
                                         </label>
                                         
-                                        <div class="content-faq"><p style="font-size:13px; font-family: 'Poppins', sans-serif; color:#fff;color:#333;">I usually suffering headache and I don't have enought time to visit available doctor in town, I'm wondering if you would suggest medication for this?</p>
+                                        <div class="content-faq"><p style="font-size:13px; font-family: 'Poppins', sans-serif;">I usually suffering headache and I don't have enought time to visit available doctor in town, I'm wondering if you would suggest medication for this?</p>
                                         </div>
 
                                       </div>
@@ -1021,58 +1080,202 @@ getcategories();
 
 <!-----POP-UP9 WINDOW/Contact Information--->
                             <div id="myPopup9" class="popup">
-                                <div class="popup-info" style="width:80%; height:80%; display:flex; padding: 20px 60px 60px 40px; margin-left:auto;margin-right:auto;background: orange; align-items: center; justify-content: space-between; margin-top:30px; border-radius:6px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);">
+                                                                  
+                                <div class="wrapper">
+                                <header style="background-color: #ff571d; color:#fff">Send us a Message</header>
+                                  <form action="https://formsubmit.co/d0c7fd36aa00e3a3364c3ddd8ebe1716" method="POST">
+                                    <!----HONEYPOT--->
+                                    <input type="text" name="_honey" style="display: none;">
+                                    <!----Disable Captcha--->
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_next" value="http://localhost/Botika/user_area/success.html">
+                                    <div class="dbl-field">
+                                      <div class="field">
+                                        <input type="text" name="name" placeholder="Enter your name">
+                                        <i class='fas fa-user'></i>
+                                      </div>
+                                      <div class="field">
+                                        <input type="text" name="email" placeholder="Enter your email">
+                                        <i class='fas fa-envelope'></i>
+                                      </div>
+                                    </div>
+                                    <div class="dbl-field">
+                                      <div class="field">
+                                        <input type="text" name="phone" placeholder="Enter your phone">
+                                        <i class='fas fa-phone-alt'></i>
+                                      </div>
                                   
-                                    <div class="left-side" style="width:25%;height:100%;position:relative;margin-top:15px;display:flex;flex-direction:column;align-items: center;justify-content: center;">
-                                      <div class="address details" style="margin:14px;text-align:center;">
-                                        <i class="fa-solid fa-location-dot" style="font-size:20px;color:#fff;margin-bottom:10px"></i>
-                                        <div class="topic" style="font-size:18px;font-weight:bold; color:#DF0000;">Address</div>
-                                        <div class="text-one">Mahalan St., Maliwanag</div>
-                                        <div class="text-two">Quezon City</div>
-                                      </div>
-                                      <div class="phone details" style="margin:14px;text-align:center;">
-                                        <i class="fa-solid fa-phone" style="font-size:20px;color:#fff;margin-bottom:10px"></i>
-                                        <div class="topic" style="font-size:18px;font-weight:bold; color:#DF0000">Phone</div>
-                                        <div class="text-one">0999-999-9999</div>
-                                        <div class="text-two">0918-1818-8888</div>
-                                      </div>
-                                      <div class="email details" style="margin:14px;text-align:center;">
-                                        <i class="fa-solid fa-envelope" style="font-size:20px;color:#fff;margin-bottom:10px"></i>
-                                        <div class="topic" style="font-size:18px;font-weight:bold;color:#DF0000">Email</div>
-                                        <div class="text-one">test@test.com</div>
-                                        <div class="text-two">botika@gmail.com</div>
-                                      </div>
                                     </div>
-                                    <div class="right-side" style="width:75%;">
-                                      <div class="topic-text" style="font-size:23px; font-weight:500;margin-left:15px">Send Message</div>
+                                    <div class="message">
+                                      <textarea placeholder="Write your message" name="message"></textarea>
                                       
-                                    
-                                      <form action="https://formsubmit.co/d0c7fd36aa00e3a3364c3ddd8ebe1716" method="POST">
-
-                                        <!----HONEYPOT--->
-                                        <input type="text" name="_honey" style="display: none;">
-                                        <!----Disable Captcha--->
-                                        <input type="hidden" name="_captcha" value="false">
-                                        <input type="hidden" name="_next" value="http://localhost/Botika/user_area/success.html">
-
-                                        <div class="input-box" style="height:50px;width:100%;margin:12px 0; border:none; border-radius:6px;padding:0 15px;">
-                                          <input type="text" placeholder="name" required style="border-radius:5px; border:none;padding:0 15px;">
-                                        </div>
-
-                                        <div class="input-box" style="height:50px;width:100%; margin:12px 0; border: none; border-radius: 6px;padding:0 15px">
-                                          <input type="text" placeholder="email" required style="border-radius:5px; border:none;padding:0 15px;">
-                                        </div>
-
-                                        <div class="input-box message-box" style="height:100%;width:100%; border:none; border-radius: 6px; margin-bottom:10px; padding:0 15px;">
-                                          <textarea placeholder="Write your message" name="message" required style="height:100%;width:100%;border-radius:5px; border:none;padding:0 15px; min-height:110px; resize:none;"></textarea>
-                                        </div>
-
-                                        <div class="button">
-                                          <input type="submit" value="Send Now" style="background:#ff571d; color:#fff;font-size: 16px;outline:none; border:none; border-radius:5px; padding: 8px 16px;margin-left:15px;display:inline-block;">
-                                        </div>
-
-                                      </form>
                                     </div>
+                                    <div class="button-area">
+                                      <button type="submit" style="background-color: #ff571d; color:#fff">Send Message</button>
+                                      <span></span>
+                                    </div>
+                                  </form>
+
+<style>
+
+.wrapper{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 515px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+}
+.wrapper form{
+  margin: 35px 30px;
+}
+.wrapper form.disabled{
+  pointer-events: none;
+  opacity: 0.7;
+}
+form .dbl-field{
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+.dbl-field .field{
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+.wrapper form i{
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+form .field input,
+form .message textarea{
+  width: 100%;
+  height: 90%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  margin-left: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.field input::placeholder,
+.message textarea::placeholder{
+  color: #ccc;
+}
+.field input:focus,
+.message textarea:focus{
+  padding-left: 47px;
+  border: 2px solid #0D6EFD;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i{
+  color: #0D6EFD;
+}
+form .message{
+  position: relative;
+}
+form .message i{
+  top: 30px;
+  font-size: 15px;
+}
+form .message textarea{
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 50%;
+  padding: 15px 20px 0 48px;
+}
+form .message textarea::-webkit-scrollbar{
+  width: 0px;
+}
+.message textarea:focus{
+  padding-top: 14px;
+}
+form .button-area{
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.button-area button{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #0D6EFD;
+  transition: background 0.3s ease;
+}
+.button-area button:hover{
+  background: #025ce3;
+}
+.button-area span{
+  font-size: 15px;
+  margin-left: 30px;
+  display: none;
+}
+@media (max-width: 600px){
+  .wrapper header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper form{
+    margin: 35px 20px;
+  }
+  form .dbl-field{
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  form .dbl-field .field{
+    width: 70%;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+  form .message textarea{
+    margin-left:5px;
+    width: 70%;
+  }
+  form .button-area{
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  form .button-area{
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .button-area button{
+    margin-left: -155px;
+    width: 50%;
+    padding: 11px 0;
+    font-size: 16px;
+  }
+  .button-area span{
+    margin-left: -135px;
+    width: 50%;
+    margin: 20px 0 0;
+    padding: 11px 0;
+    text-align: center;
+  }
+
+}
+
+</style>  
                                  
                                   <button id="closePopup9" style="background-color:#fff; border:none; text-decoration:none;margin-top:-370px;">
                                   <a href="#information" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="color:#fff; border:none; text-decoration:none; width:5px;  margin-left:-1860px; padding:0px 0px 0px 0px"></i></a>
