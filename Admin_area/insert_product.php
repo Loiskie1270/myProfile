@@ -61,7 +61,7 @@ if(isset($_POST['insert_product'])){
  </head>
  <body style="background-color:#f5ffcf;color:#fff;">
      <div class="container w-50 mt-3" style="background-color:#f5ffcf;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:100%; border-radius:5px; display:block; margin-left:auto; margin-right:auto;">
-        <h3 class="text-center mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:5px 5px 5px 5px; margin-bottom:5px">INSERT PRODUCTS</h3>
+        <h3 class="text-center mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px">INSERT PRODUCTS</h3>
         <!--Form-->
         <form action="" method="post" enctype="multipart/form-data" style="background-color:#ffbc7e;color:#fff; width:100%;">
             <div class="form-outline mb-0 m-auto" style="padding: 15px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
@@ -118,8 +118,7 @@ if(isset($_POST['insert_product'])){
                                     $brand_id=$row['brand_id'];
                                     echo "<option value='$brand_id'>$brand_title</option>";
                                 }
-                        
-                        
+
                         ?>
                         <!--
                         <option value="">Brand1 </option>

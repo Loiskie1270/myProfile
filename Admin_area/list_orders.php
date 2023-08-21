@@ -1,6 +1,10 @@
-<h4 class="text-center text-bg-success mt-3 mb-0">ALL ORDERS</h4>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap');
+</style>
+
+<h4 class="text-center mt-3 mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px">ALL ORDERS</h4>
 <table class="table table-bordered mt-0">
-    <thead class="bg-info">
+    <thead>
     <?php
 $get_orders="select * from `user_orders`";
 $result=mysqli_query($conn,$get_orders);
@@ -13,13 +17,13 @@ $row_count=mysqli_num_rows($result);
     echo "<h4 class='text-danger text-center mt-5'>No order to display</h4>";
   }else{
       echo "<tr>
-    <th class='bg-primary text-light text-center'>SI no.</th>
-    <th class='bg-primary text-light text-center'>Amout Due</th>
-    <th class='bg-primary text-light text-center'>Invoice No.</th>
-    <th class='bg-primary text-light text-center'>Total Products</th>
-    <th class='bg-primary text-light text-center'>Order Date</th>
-    <th class='bg-primary text-light text-center'>Status</th>
-    <th class='bg-primary text-light text-center'>Delete</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>SI no.</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold;'>Amout Due</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold;'>Invoice No.</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold;'>Total Products</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold;'>Order Date</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold;'>Status</th>
+    <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold;'>Delete</th>
     </tr>
     </thead>
     <tbody class='bg-secondary text-light'>";
@@ -34,12 +38,12 @@ $row_count=mysqli_num_rows($result);
         $order_status=$row_data['order_status'];
         $number++;
         echo "<tr>
-        <td class='bg-secondary text-center text-light'>$number</td>
-        <td class='bg-secondary text-center text-light'>$amout_due</td>
-        <td class='bg-secondary text-center text-light'>$invoice_number</td>
-        <td class='bg-secondary text-center text-light'>$total_products</td>
-        <td class='bg-secondary text-center text-light'>$order_date</td>
-        <td class='bg-secondary text-center text-light'>$order_status</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$number</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$amout_due</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$invoice_number</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$total_products</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$order_date</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$order_status</td>
 
         
         <td class='bg-secondary text-light text-center text-decoration-none'><a href='index.php?delete_order=<?php echo $order_id ?>' 

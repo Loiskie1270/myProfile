@@ -1,11 +1,15 @@
-<h4 class="text-center text-bg-success mt-3 mb-0">ALL BRANDS</h4>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap');
+</style>
+
+<h4 class="text-center mt-3 mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px">ALL BRANDS</h4>
 <table class="table table-bordered mt-0">
     <thead class="bg-info text-center">
         <tr>
-            <th class="bg-primary text-light text-center">Serial No.</th>
-            <th class="bg-primary text-light text-center">Brand Title</th>
-            <th class="bg-primary text-light text-center">Edit</th>
-            <th class="bg-primary text-light text-center">Delete</th>
+            <th class="text-center" style="background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:14px;font-weight:bold;">Serial No.</th>
+            <th class="text-center" style="background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:14px;font-weight:bold;">Brand Title</th>
+            <th class="text-center" style="background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:14px;font-weight:bold;">Edit</th>
+            <th class="text-center" style="background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:14px;font-weight:bold;">Delete</th>
         </tr>
     </thead>
     <tbody >
@@ -19,10 +23,10 @@
             $number++;
 ?>
         <tr class="text-center">
-            <td class="bg-secondary text-light"> <?php echo $number; ?></td>
-            <td class="bg-secondary text-light"><?php echo $brand_title; ?> </td>
+            <td class="bg-secondary text-light" style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'> <?php echo $number; ?></td>
+            <td class="bg-secondary text-light" style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'><?php echo $brand_title; ?> </td>
             
-    <td class='bg-secondary text-light text-center'><a href='index.php?edit_brands=<?php echo $brand_id ?>' class='text-light'><img src='../images/edit-file5.png' alt='' class='brightness'></a></td>
+    <td class='bg-secondary text-light text-center' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'><a href='index.php?edit_brands=<?php echo $brand_id ?>' class='text-light'><img src='../images/edit-file5.png' alt='' class='brightness'></a></td>
     
     <td class='bg-secondary text-light text-center text-decoration-none'><a href='index.php?delete_brands=<?php echo $brand_id ?>' 
         type="button" class="text-light text-decoration-none" data-toggle="modal" data-target="#exampleModal"><img src='../images/trash.png' alt='' class='brightness'></a></td>

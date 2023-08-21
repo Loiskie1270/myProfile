@@ -1,6 +1,10 @@
-<h4 class="text-center text-bg-success mt-3 mb-0">ALL PAYMENTS</h4>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap');
+</style>
+
+<h4 class="text-center mt-3 mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px">ALL PAYMENTS</h4>
 <table class="table table-bordered mt-0">
-    <thead class="bg-info">
+    <thead>
     <?php
 $get_payments="select * from `user_payments`";
 $result=mysqli_query($conn,$get_payments);
@@ -11,12 +15,12 @@ if($row_count==0){
     echo "<h4 class='text-danger text-center mt-4'>No payment to display</h4>";
 }else{
     echo " <tr>
-  <th class='bg-primary text-light text-center'>SI no.</th>
-  <th class='bg-primary text-light text-center'>Invoice No.</th>
-  <th class='bg-primary text-light text-center'>Amount</th>
-  <th class='bg-primary text-light text-center'>Payment Mode</th>
-  <th class='bg-primary text-light text-center'>Order Date</th>
-  <th class='bg-primary text-light text-center'>Delete</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>SI no.</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Invoice No.</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Amount</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Payment Mode</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Order Date</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Delete</th>
   </tr>
   </thead>
   <tbody class='bg-secondary text-light'>";
@@ -32,11 +36,11 @@ if($row_count==0){
         $number++;
 
         echo "<tr>
-        <td class='bg-secondary text-center text-light'>$number</td>
-        <td class='bg-secondary text-center text-light'>$invoice_number</td>
-        <td class='bg-secondary text-center text-light'>$amount</td>
-        <td class='bg-secondary text-center text-light'>$payment_mode</td>
-        <td class='bg-secondary text-center text-light'>$payment_date</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$number</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;font-family: Poppins, sans-serif; font-size:12px;'>$invoice_number</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$amount</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$payment_mode</td>
+        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px;'>$payment_date</td>
         
 
         
