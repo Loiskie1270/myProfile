@@ -17,6 +17,13 @@ session_start();
     <title>Botika</title>
 
 <!-- Bootstrap CSS link -->
+
+        <!-- Bootstrap CSS -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+ 
   
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
@@ -28,6 +35,22 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.css" integrity="sha512-2dJkRM/DmWkZqINs3QixNKKsgG9mlBT9/PieLVF8OEGHCpPNBoPFYmGPL/yD7JuQVVm2IESF5K0zTDBaf4qehQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://kit.fontawesome.com/adadafda03.js" crossorigin="anonymous"></script>
+
+    <script>
+      const activePage = window.location.pathname;
+      const navLinks =document.querySelectorAll('nav-link').forEach(link => {
+        if(link.href.includes(`${activePage}`)){
+          link.classList.add('active');
+        }
+      })
+    </script>
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+      </script>
+        <script src=
+"https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js">
+      </script>
    
 <!-- style.css -->
 
@@ -69,7 +92,7 @@ body{
   padding: 5px 10px ;
   height: 97%;
   width: 97%;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: -55px;
   margin-top: 8px;
   margin-bottom: 3px;
@@ -82,6 +105,7 @@ body{
   font-size: 12px;
   border-radius: 5px;
 }
+
 .card-img-top{
   display: block;
   margin-left: auto;
@@ -91,7 +115,7 @@ body{
   padding: 0 15px;
   width: 40%;
   height: 50%;
-  margin-top: 5px;
+  margin-top: 8px;
   filter: drop-shadow(2px 1px 2px grey);
   /*mix-blend-mode: multiply;*/
   /*filter: contrast(1);*/
@@ -135,18 +159,45 @@ body{
   width: 50%;
   border-radius: 3px;
 }
+
+.form-control > input:focus{
+  outline:none;
+  border: none;
+}
+
+.navbar-nav > .active > a {
+  color: aqua !important;
+}
+
+.nav-item > a:hover {
+  color: aqua;
+}
+
+.active{
+    color:aqua !important;
+}
+
 .nav-link{
   color:#333;
   font-family: 'Poppins', sans-serif;
 }
+
 .nav-item .nav-link{
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
 
+.nav-link:focus {
+  color: aqua !important;
+}
+
+.active a{
+  color: red !important;
+}
+
 .nav-link:hover{
-  font-weight: bold;
+  font-weight: normal;
   color:#fff;
   font-family: 'Poppins', sans-serif;
 }
@@ -168,6 +219,7 @@ body{
   background: #fff;
   font-size: 12px;
 }
+
 .fa-circle {
   color:white;
 }
@@ -576,7 +628,7 @@ font-size: 10px;
 
 <!----First child------>
 
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff571d; padding:10px; width:101%">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff571d; padding:10px; width:100%">
   <div class="container-fluid">
   <img src="./images/botikalogo2.png" alt="" class="logo">
   
@@ -588,7 +640,7 @@ font-size: 10px;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="display_all.php">My Pharmacy</a>
@@ -597,19 +649,26 @@ font-size: 10px;
         <?php 
  if(isset($_SESSION['username'])){
 echo "<li class='nav-item'>
-<a class='nav-link' href='./user_area/profile.php'><strong>My Account</strong></a>
+<a class='nav-link' href='./user_area/profile.php'>My Account</a>
 </li>"; 
   }else{
     echo "<li class='nav-item'>
-    <a class='nav-link' href='./user_area/user_registration.php'>Register</a>
+    <a class='nav-link' href='#main' id='myButton11'>Register</a>
+    
     </li>"; 
   }
  
 ?>
         
         <li class="nav-item">
-          <a class="nav-link" href="./user_area/contact.php">Contact Us</a>
+        
+        <!--<a class="nav-link" href="./user_area/contact.php" id="main">Contact Us</a>-->
+        <!--<a class='nav-link' href='./user_area/user_registration.php'>Register</a>-->
+        <!--<a class='nav-link text-light' href='./user_area/user_login.php' >Login</a>-->
+          <a class="nav-link" href="#main" id="myButton10">Contact Us</a>
+          
         </li>
+
 
         <li class="nav-item">
           <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart" style="font-size:15px;margin-left:-3px;"></i><sup></sup></a>
@@ -620,11 +679,74 @@ echo "<li class='nav-item'>
         </li>
         
       </ul>
-      <form class="d-flex" action="search_product.php" method="get">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-        <!--<button class="btn btn-outline-light" type="submit">Search</button>--->
-        <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
 
+      <form class="d-flex" action="search_product.php" method="get">
+          <table class="elementsContainer">
+            <tr>
+              <td>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search_data" style="width:100%;">
+              </td>
+              <!--<td>&nbsp;
+              <a href=""><i class="fa-solid fa-magnifying-glass" type="submit" name="search_data_product" style="color:#fff;"></i></a>
+              </td>-->
+              <!--<button class="btn btn-outline-light" type="submit">Search</button>--->
+                  
+                 <button type="submit" class="btn" name="search_data_product" style="color:#333; font-size: 5px;line-height:1px;padding:5px; vertical-align:middle; margin-left:-5px;"><i class="fa-solid fa-magnifying-glass fa-rotate-90" style="color:#333; font-size: 18px;"></i></button>
+              </tr>     
+          </table>           
+<style> 
+  button{
+     color: white; 
+     padding: 12px 14px; 
+     font-size: 20px;
+     cursor: pointer; 
+     border:0;
+     background:none;
+     border-radius: 50px;
+     float: right;
+     vertical-align: middle;
+     outline: none;
+     margin-top: 5px;
+  }    
+  button:hover{
+    color: #fff;
+  }
+  .d-flex {
+    background-color: #ffaa5b;
+    float: right;
+    position: relative;
+    height: 42px;
+    text-decoration: none;
+    border: 3px solid  #fe7a00;
+    outline: none;
+    border-radius: 50px;
+    padding: 0px 10px;
+    width: 300px;
+    margin-top: 5px;
+    outline:none;
+    
+   }
+  .elementsContainer{
+    width: 750%;
+    height: 100%;
+    vertical-align: middle;    
+  }
+  .form-control{
+    border: none;
+    height: 80%;
+    width: 100%;
+    padding: 0px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #fff;
+  }
+  .form-control:focus{
+    outline: none;
+  }
+
+</style>
       </form>
     </div>
   </div>
@@ -637,7 +759,7 @@ cart();
 
 <!--second Child -->
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%;height:50px;">
 
   <ul class="navbar nav me-auto">
     
@@ -648,12 +770,14 @@ cart();
               </li>";
               }else{
                 echo "<li class='nav-item'>
-                <a class='nav-link text-dark href='#'>Welcome <strong style='color: yellow'>    ".$_SESSION['username']."</strong></a>
+                <a class='nav-link text-dark href='#'>Welcome &nbsp; <strong style='color: #ff571d;'>    ".$_SESSION['username']."</strong></a>
               </li>";
               }   
 if(!isset($_SESSION['username'])){
   echo "<li class='nav-item'>
-  <a class='nav-link text-light' href='./user_area/user_login.php'>Login</a>
+  
+  <a class='nav-link text-light' href='#main' id='myButton12'>Login</a>
+  
 </li>";
 }else{
   echo "<li class='nav-item'>
@@ -667,7 +791,7 @@ if(!isset($_SESSION['username'])){
 
 <!--third child -->
 
-<div class="container-image" style="background-color: #ff571d; padding:20px; width:100%; position : sticky; ">
+<div class="container-image" style="background-color: #ff571d; padding:20px; width:100%; position :     sticky; ">
    
    <p class="awesome" style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-22px; margin-left: -14px; font-size:15px; position : sticky; ">GARANTISADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAMOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;BAGO</p>
 </div>
@@ -785,6 +909,7 @@ getcategories();
         <div style="background-color: #ff571d; padding:10px; width:101%; position : sticky;">
         <p style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-2px;  margin-left: -14px; font-size:15px; color: white; position : sticky;"><a href="" style="color: white; text-decoration:none"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: white; text-decoration:none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;<a href="" style="color: white; text-decoration:none"></a></p>
     </div>
+
 <!--INCLUDE FOOTER---->           
 <section class="section" id="features" style="margin-bottom: 2px; caret-color:transparent">
         <div class="container">
@@ -1082,13 +1207,17 @@ getcategories();
                             <div id="myPopup9" class="popup">
                                                                   
                                 <div class="wrapper">
-                                <header style="background-color: #ff571d; color:#fff">Send us a Message</header>
+                                  <header style="background-color: #ff571d; color:#fff">Send us a Message</header>
                                   <form action="https://formsubmit.co/d0c7fd36aa00e3a3364c3ddd8ebe1716" method="POST">
+
                                     <!----HONEYPOT--->
                                     <input type="text" name="_honey" style="display: none;">
+
                                     <!----Disable Captcha--->
                                     <input type="hidden" name="_captcha" value="false">
+
                                     <input type="hidden" name="_next" value="http://localhost/Botika/user_area/success.html">
+
                                     <div class="dbl-field">
                                       <div class="field">
                                         <input type="text" name="name" placeholder="Enter your name">
@@ -1099,24 +1228,445 @@ getcategories();
                                         <i class='fas fa-envelope'></i>
                                       </div>
                                     </div>
+
                                     <div class="dbl-field">
                                       <div class="field">
                                         <input type="text" name="phone" placeholder="Enter your phone">
                                         <i class='fas fa-phone-alt'></i>
                                       </div>
-                                  
                                     </div>
+
                                     <div class="message">
                                       <textarea placeholder="Write your message" name="message"></textarea>
-                                      
                                     </div>
+
                                     <div class="button-area">
-                                      <button type="submit" style="background-color: #ff571d; color:#fff">Send Message</button>
+
+                                      <button type="submit" style="background-color: #ff571d; color:#fff; margin-bottom:15px;">Send Message</button>
                                       <span></span>
+
+                                      <button id="closePopup9" style="background-color:#fff; border:none; text-decoration:none;margin-top:-370px; cursor:pointer;">
+
+                                      <a href="#information" style="text-decoration: none; color:#fff;cursor:pointer;"><i class="fa-regular fa-circle-xmark" style="color:#fff; border:none; text-decoration:none; width:55px;  margin-left:800px;margin-top:-240px; padding:0px 0px 0px 0px;cursor:pointer;"></i></a>
+                                      </button>
                                     </div>
                                   </form>
+                                </div> 
+                            </div> 
+<!---START OF CONTACT MAIN--------->  
+                            <div id="myPopup10" class="popup">
+                                                                  
+                                <div class="wrapper">
+                                  <header style="background-color: #ff571d; color:#fff">Send us a Message</header>
+                                  <form action="https://formsubmit.co/d0c7fd36aa00e3a3364c3ddd8ebe1716" method="POST">
+
+                                    <!----HONEYPOT--->
+                                    <input type="text" name="_honey" style="display: none;">
+
+                                    <!----Disable Captcha--->
+                                    <input type="hidden" name="_captcha" value="false">
+
+                                    <input type="hidden" name="_next" value="http://localhost/Botika/user_area/success.html">
+
+                                    <div class="dbl-field">
+                                      <div class="field">
+                                        <input type="text" name="name" placeholder="Enter your name">
+                                        <i class='fas fa-user'></i>
+                                      </div>
+                                      <div class="field">
+                                        <input type="text" name="email" placeholder="Enter your email">
+                                        <i class='fas fa-envelope'></i>
+                                      </div>
+                                    </div>
+
+                                    <div class="dbl-field">
+                                      <div class="field">
+                                        <input type="text" name="phone" placeholder="Enter your phone">
+                                        <i class='fas fa-phone-alt'></i>
+                                      </div>
+                                    </div>
+
+                                    <div class="message">
+                                      <textarea placeholder="Write your message" name="message"></textarea>
+                                    </div>
+
+                                    <div class="button-area">
+
+                                      <button type="submit" style="background-color: #ff571d; color:#fff; margin-bottom:15px;">Send Message</button>
+                                      <span></span>
+
+                                      <button id="closePopup10" style="background-color:#fff; border:none; text-decoration:none;margin-top:-370px; cursor:pointer;">
+
+                                      <a href="#main" style="text-decoration: none; color:#fff;cursor:pointer;"><i class="fa-regular fa-circle-xmark" style="color:#fff; border:none; text-decoration:none; width:55px;  margin-left:800px;margin-top:-240px; padding:0px 0px 0px 0px;cursor:pointer;"></i></a>
+                                      </button>
+                                    </div>
+                                  </form>
+                                </div> 
+                            </div>               
+
+<!---END OF CONTACT MAIN---------> 
+
+<!---START OF REGISTRATION MAIN---------> 
+                            <div id="myPopup11" class="popup">
+
+                              <div class="wrapper-reg">
+
+                              <div class="title-reg" style="background-color: #ff571d; margin-top:15px;font-family: 'Poppins', sans-serif; font-size:20px;"><span>Registration</div>
+<!--Form -->
+                                  <form action="" method="post" enctype="multipart/form-data">
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                      <!--username field-->
+
+                                          <i class="icon fa-solid fa-user-tie" style="background-color: #ff571d"></i>
+                                          <input type="text" name="user_username" id="user_username" placeholder="&nbsp;&nbsp;Username" autocomplete="off" required="required">
+
+                                      </div>
+
+                                      <!--Email field-->
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <i class="icon fa-solid fa-envelope" style="background-color: #ff571d"></i>
+                                          <input type="email" name="user_email" id="user_email" placeholder="&nbsp;&nbsp;Your email" autocomplete="off" required="required">
+
+                                      </div>
+
+                                      <!--User Image Field-->
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <i class="icon fa-solid fa-image" style="background-color: #ff571d"></i>
+                                          <input type="file" name="user_image" id="user_image" required="required" style="padding-left:39px;">
+
+                                      </div>  
+
+                                      <!--Password Field-->
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <i class="icon fa-solid fa-lock" style="background-color: #ff571d"></i>
+                                          <input type="password" name="user_password" id="user_password" placeholder="&nbsp;&nbsp;Enter your password" autocomplete="off" required="required">
+
+                                      </div> 
+
+                                      <!--Confirmed Password Field-->
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <i class="icon fa-sharp fa-solid fa-unlock" style="background-color: #ff571d"></i>
+                                          <input type="password" name="confirm_user_password" id="confirm_user_password"  placeholder="&nbsp;&nbsp;Confirm Password" autocomplete="off" required="required">
+
+                                      </div> 
+
+                                      <!---Address Field-->
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <input type="text" name="user_address" id="user_address" placeholder="&nbsp;&nbsp;Address" autocomplete="off" required="required">
+                                          <i class="icon fa-sharp fa-solid fa-location-dot" style="background-color: #ff571d;margin-top:-35px;"></i>
+
+                                      </div> 
+
+                                      <!---Contact Field-->
+
+                                      <div class="row-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <input type="text" name="user_mobile" id="user_passworduser_mobile" placeholder="&nbsp;&nbsp; Mobile number" autocomplete="off" required="required">
+                                          <i class="icon fa-solid fa-mobile-retro" style="background-color: #ff571d;margin-top:-35px;"></i>
+
+                                      </div> 
+
+                                      <!--Register Field--->
+
+                                      <div class="row-reg button-reg" style="font-family: 'Poppins', sans-serif;">
+
+                                          <input type="submit" name="user_register" style="background-color: #ff571d; padding: 5px 5px 5px 5px; font-family: 'Poppins', sans-serif;font-size:18px;" value="Register">
+                                          <!--<p><strong>Already have an account?</strong><a href="user_login.php" class="text-danger text-decoration-none"><strong> Login </strong></a></p>-->
+                                      </div>          
+
+                                      <div class="signup-link-reg" style="font-family: 'Poppins', sans-serif;">Already have an account?<a href="./user_area/user_login.php" class="text-danger text-decoration-none">&nbsp;Login</a>
+                                      
+                                      <!--<a href="./user_area/user_login.php" class="text-danger text-decoration-none">-->
+                                      
+                                      <button id="closePopup11" style="background-color:#fff; border:none; text-decoration:none;margin-top:-370px; cursor:pointer;">
+
+                                        <a href="#main" style="text-decoration: none; color:#fff;cursor:pointer;"><i class="fa-regular fa-circle-xmark" style="color:#fff; border:none; text-decoration:none; width:55px;  margin-left:800px;margin-top:-240px; padding:0px 0px 0px 0px;cursor:pointer;"></i></a>
+                                      </button>
+
+                                    </div>  
+                                      
+                                      
+
+                                  </form>
+
+
+                              </div>   
+                            </div>       
+
+<!---END OF REGISTRATION MAIN---------> 
+
+                            <div id="myPopup12" class="popup"> 
+
+                                <div class="wrapper-login">
+
+                                <div class="title-login" style="background-color: #ff571d;margin-top:15px;border-radius:3px;"><span>Login</div>
+                                <form action="" method="post">
+
+                                  <div class="row-login">
+                                    <i class="fas fa-user" style="background-color: #ff571d"></i>
+                                    <!--<input type="text" name="user_username" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off" required="required">-->
+                                    <input type="text" name="user_username" id="user_username" placeholder="Email or Phone" required>
+                                  </div>
+
+                                  <div class="row-login">
+
+                                    <i class="fas fa-lock" style="background-color: #ff571d"></i>
+                                    <!--<input type="password" name="user_password" id="user_password" class="form-control" placeholder="Enter your password" autocomplete="off" required="required">-->
+                                    <input type="password" name="user_password" id="user_password" placeholder="Password" required>
+
+                                  </div>
+
+                                  <div class="pass"><a href="#" style="font-family: 'Poppins', sans-serif;">Forgot password?</a></div>
+
+                                  <div class="row-login button-login">
+                                  <!--<input type="submit" name="user_login" class="bg-warning py-2 px-3 fw-bold border-0" value="Login">-->
+                                    <input type="submit" name="user_login" value="Login" style="background-color: #ff571d;width:100%;">
+                                  </div>
+
+                                  <div class="signup-link-login" style="font-family: 'Poppins', sans-serif;">Not a member? <a href="user_registration.php" style="font-family: 'Poppins', sans-serif;">Signup now</a></div>
+
+                                  <button id="closePopup12" style="background-color:#fff; border:none; text-decoration:none;margin-top:-370px; cursor:pointer;">
+
+                                        <a href="#main" style="text-decoration: none; color:#fff;cursor:pointer;"><i class="fa-regular fa-circle-xmark" style="color:#fff; border:none; text-decoration:none; width:55px;  margin-left:800px;margin-top:-240px; padding:0px 0px 0px 0px;cursor:pointer;"></i></a>
+                                  </button>
+
+                                </form>
+
+                                </div> 
+                            </div>  
+
+<!---PHP CODE of login MAIN------>
+
+<?php 
+ 
+if(isset($_POST['user_login'])){
+    $user_username=$_POST['user_username'];
+    $user_password=$_POST['user_password'];
+    $select_query="select * from `user_table` where username='$user_username'";
+    $results=mysqli_query($conn,$select_query);
+    $row_count=mysqli_num_rows($results);
+    $row_data=mysqli_fetch_assoc($results);
+    $user_ip=getIPAddress();
+
+    // CART ITEM
+    $select_query_cart="select * from `cart_details` where ip_address='$user_ip'";
+    $select_cart=mysqli_query($conn,$select_query_cart);
+    //$results=mysqli_query($conn,$select_query);
+    $row_count_cart=mysqli_num_rows($select_cart);
+    if($row_count>0){
+        $_SESSION['username']=$user_username;
+        if(password_verify($user_password,$row_data['user_password'])){
+           // echo "<script>alert('Login Successfully!')</script>";
+           if($row_count==1 and $row_count_cart==0){
+            $_SESSION['username']=$user_username;
+            echo "<script>alert('Login Successfully!')</script>";
+            echo "<script>window.open('./user_area/profile.php','_self')</script>";
+           }else{
+            $_SESSION['username']=$user_username;
+            echo "<script>alert('Login Successfully!')</script>";
+            echo "<script>window.open('./user_area/payment.php','_self')</script>";
+           }
+        }else{
+            echo "<script>alert('Invalid Credentials!')</script>";
+        }
+
+    }else{
+        echo "<script>alert('Invalid Credentials!')</script>";
+    }
+    
+
+}
+ 
+ 
+ ?>
+
+<!---PHP CODE of REGISTRATION MAIN------>
+<?php 
+ 
+ if(isset($_POST['user_register'])){
+    $user_username=$_POST['user_username'];
+    $user_email=$_POST['user_email'];
+    $user_password=$_POST['user_password'];
+    $hash_password=password_hash($user_password,PASSWORD_DEFAULT);
+    $confirm_user_password=$_POST['confirm_user_password'];
+    $user_address=$_POST['user_address'];
+    $user_mobile=$_POST['user_mobile'];
+    $user_image=$_FILES['user_image']['name'];
+    $user_image_tmp=$_FILES['user_image']['tmp_name'];
+    $user_ip=getIPAddress();
+
+    // select query to check username already exist
+$select_query="Select * from `user_table` where username='$user_username' or user_email='$user_email'";
+$result=mysqli_query($conn,$select_query);    
+$rows_count=mysqli_num_rows($result);
+if($rows_count>0){
+    echo "<script>alert('Username & E-mail already exist!')</script>";
+    
+    //check the CONFIRMATION OF PASSWORD
+}elseif($user_password!=$confirm_user_password){
+    echo "<script>alert('Password do not match!')</script>";
+
+}
+
+else{
+    
+    // Insert data to (DATABASE)user_table
+
+    $insert_query="insert into `user_table` (username,user_email,user_password,user_image,user_ip_add,user_address,user_mobile) values ('$user_username','$user_email','$hash_password','$user_image','$user_ip','$user_address', '$user_mobile')";
+    // Execute the insertion of data to Database (user_table)
+    $sql_execute=mysqli_query($conn,$insert_query);
+    //insert images into one folder
+    move_uploaded_file($user_image_tmp,"./user_images/$user_image");
+    //condition
+    if($sql_execute){
+        echo "<script>alert('Data inserted successfully!')</script>";
+    }else{
+        die(mysqli_error($conn));
+    }
+ }
+
+ // SELECTING CART ITEMS
+ $select_cart_items="Select * from `cart_details` where ip_address='$user_ip'";
+ $result_cart=mysqli_query($conn,$select_cart_items);
+ $rows_count=mysqli_num_rows($result_cart);
+ if($rows_count>0){
+    $_SESSION['username']=$user_username;
+    echo "<script>alert('You have items in your cart!')</script>";
+    echo "<script>window.open('checkout.php','_self')</script>";
+ }else{
+    echo "<script>window.open('../index.php','_self')</script>";
+ }
+}
+ 
+ ?>
 
 <style>
+
+.wrapper-reg{
+
+ max-width: 450px;
+ width: 100%;
+ margin: 30px auto 0;
+ padding: 15px 30px;
+ overflow: hidden;
+ background: #fff;
+ border-radius: 5px;
+ box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper-reg .title-reg{
+ margin-top: 5px;
+ width:90%;
+ margin: auto;
+ height: 50px;
+ background: #16a085;
+ border-radius: 3px;
+ color: #fff;
+ font-size: 22px;
+ font-weight: 600;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.wrapper-reg form{
+ padding: 15px 25px 20px 25px;
+}
+.wrapper-reg form .row-reg{
+ height: 35px;
+ margin-bottom: 10px;
+ position: relative;
+}
+.wrapper-reg form .row-reg input{
+ height: 100%;
+ width: 100%;
+ outline: none;
+ padding-left: 60px;
+ border-radius: 5px;
+ border: 1px solid lightgrey;
+ font-size: 14px;
+ transition: all 0.3s ease;
+}
+form .row-reg input:focus{
+ border-color: #16a085;
+ box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row-reg input::placeholder{
+ color: #999;
+}
+.wrapper-reg form .row-reg i{
+ position: absolute;
+ width: 45px;
+ height: 100%;
+ color: #fff;
+ font-size: 15px;
+ background: #16a085;
+ border: 1px solid #16a085;
+ border-radius: 5px 0 0 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.wrapper-reg form .pass{
+ margin: -8px 0 20px 0;
+}
+.wrapper-reg form .pass a{
+ color: #16a085;
+ font-size: 15px;
+ text-decoration: none;
+}
+.wrapper-reg form .pass a:hover{
+ text-decoration: underline;
+}
+.wrapper-reg form .button-reg input{
+ padding: 10px;
+ width: 100%;
+ letter-spacing: 1px;
+ cursor: pointer;
+ color: #fff;
+ font-size: 15px;
+ font-weight: 500;
+ padding-left: 10px 10px;
+ background: #16a085;
+ border: 1px solid #16a085;
+ cursor: pointer;
+ margin-top: 10px;
+ 
+}
+form .button-reg input:hover{
+ background: #12876f;
+}
+.wrapper-reg form .signup-link-reg{
+ color: #333; 
+ text-align: center;
+ margin-top: 10px;
+ font-size: 14px;
+}
+.wrapper-reg form .signup-link-reg a{
+ color: #16a085;
+ text-decoration: none;
+}
+form .signup-link-reg a:hover{
+ text-decoration: underline;
+}
+@media (max-width: 600px){
+  .wrapper-reg .wrapper-reg .title-reg
+  .wrapper-reg form {
+    display:flex;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}
 
 .wrapper{
   display: block;
@@ -1272,25 +1822,120 @@ form .button-area{
     padding: 11px 0;
     text-align: center;
   }
-
 }
 
+/******CSS login form********/
+
+.wrapper-login{
+ margin-top: 75px;    
+ margin-left: auto;
+ margin-right: auto;
+ max-width: 400px;
+ padding: 25px 30px; 
+ background: #fff;
+ border-radius: 5px;
+ box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+ overflow: hidden;
+}
+.wrapper-login .title-login{
+
+ height: 50px;
+ background: #16a085;
+ border-radius: 5px 5px 0 0;
+ color: #fff;
+ font-size: 20px;
+ font-weight: 600;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.wrapper-login form{
+ padding: 30px 25px 25px 25px;
+}
+.wrapper-login form .row-login{
+ height: 45px;
+ margin-bottom: 15px;
+ position: relative;
+}
+.wrapper-login form .row-login input{
+ height: 100%;
+ width: 100%;
+ outline: none;
+ padding-left: 60px;
+ border-radius: 5px;
+ border: 1px solid lightgrey;
+ font-size: 14px;
+ font-family: 'Poppins', sans-serif;
+ transition: all 0.3s ease;
+}
+form .row-login input:focus{
+ border-color: #16a085;
+ box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row-login input::placeholder{
+ color: #999;
+}
+.wrapper-login form .row-login i{
+ position: absolute;
+ width: 47px;
+ height: 100%;
+ color: #fff;
+ font-size: 14px;
+ background: #16a085;
+ border: 1px solid #16a085;
+ border-radius: 5px 0 0 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.wrapper-login form .pass{
+ margin: -8px 0 20px 0;
+}
+.wrapper-login form .pass a{
+ color: #16a085;
+ font-size: 14px;
+ text-decoration: none;
+}
+.wrapper-login form .pass a:hover{
+ text-decoration: underline;
+}
+.wrapper-login form .button-login input{
+ color: #fff;
+ font-size: 17px;
+ font-weight: 500;
+ padding-left: 0px;
+ background: #16a085;
+ border: 1px solid #16a085;
+ cursor: pointer;
+}
+form .button-login input:hover{
+ background: #12876f;
+}
+.wrapper-login form .signup-link-login{
+ text-align: center;
+ margin-top: 20px;
+ font-size: 14px;
+ color:#333;
+}
+.wrapper-login form .signup-link-login a{
+ color: #16a085;
+ text-decoration: none;
+}
+form .signup-link-login a:hover{
+ text-decoration: underline;
+}
+
+
 </style>  
-                                 
-                                  <button id="closePopup9" style="background-color:#fff; border:none; text-decoration:none;margin-top:-370px;">
-                                  <a href="#information" style="text-decoration: none; color:#fff"><i class="fa-regular fa-circle-xmark" style="color:#fff; border:none; text-decoration:none; width:5px;  margin-left:-1860px; padding:0px 0px 0px 0px"></i></a>
-                                    </button>
-                                </div>
-                            </div>
 <!-----end of POP-UP9 WINDOW/Contact Information---> 
                         </li>
-
 
                     </ul>
                      
                 </div>
             </div>
         </div>
+        
         <script>
         myButton.addEventListener("click", function () {
             myPopup.classList.add("show");
@@ -1413,18 +2058,59 @@ form .button-area{
             
         });
         window.addEventListener("click", function (event) {
-            if (event.target == myPopup8) {
+            if (event.target == myPopup9) {
                 myPopup9.classList.remove("show");
                 
             }
         });
-        
-          
+        myButton10.addEventListener("click", function () {
+            myPopup10.classList.add("show");
+            
+        });
+        closePopup10.addEventListener("click", function () {
+            myPopup10.classList.remove("show");
+            
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup10) {
+                myPopup10.classList.remove("show");
+                
+            }
+        });
+        myButton11.addEventListener("click", function () {
+            myPopup11.classList.add("show");
+            
+        });
+        closePopup11.addEventListener("click", function () {
+            myPopup11.classList.remove("show");
+            
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup11) {
+                myPopup11.classList.remove("show");
+                
+            }
+        });
+        myButton12.addEventListener("click", function () {
+            myPopup12.classList.add("show");
+            
+        });
+        closePopup12.addEventListener("click", function () {
+            myPopup12.classList.remove("show");
+            
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup12) {
+                myPopup12.classList.remove("show");
+                
+            }
+        });
+                  
     </script>
     </section>
 <!--INCLUDE FOOTER---->    
   <div class="footer">
-    <p style="margin-bottom: 5px">All rights reserved &nbsp;&#x26AB; Designed by A. A. Corbeta - 2023</p> 
+    <p style="margin-bottom:0px">All rights reserved &nbsp;&#x26AB; Designed by A. A. Corbeta - 2023</p> 
        <span> <a href="https://www.facebook.com/" class="uil uil-facebook-f" target="_blank"></a></span>&nbsp;&nbsp;  <span><a href="https://ph.linkedin.com/" class="uil uil-linkedin" target="_blank"></a></span>&nbsp;&nbsp;  <span><a href="https://twitter.com/" class="uil uil-twitter" target="_blank"></a></span>&nbsp;&nbsp;  <span><a href="https://www.instagram.com/" class="uil uil-instagram-alt" target="_blank"></a></span> 
   </div>
   

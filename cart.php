@@ -51,48 +51,97 @@ body{
   width: 110px;
   margin-left: 3px;
   margin-right: 3px;
+
 }
-.card-img-top{
-  position: absolute;
-  display: flex;
-  margin-left: -30px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 5px 5px 5px 5px;
-  width: 50%;
-  height: 40%;
-  filter: drop-shadow(2px 2px 5px white);
-  /*mix-blend-mode: multiply;*/
-  /*filter: contrast(1);*/
-}
+
 .card{
   box-shadow: 0px 0px 2px 2px lightgray;
+  background-color: #fffef8;
   padding: 5px 10px ;
   height: 97%;
   width: 97%;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: -55px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  column-gap: 2px;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  column-gap: 1px;
   caret-color: transparent;
 }
+
 .card .btn{
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   border-radius: 5px;
 }
+.card-img-top{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  width: 40%;
+  height: 50%;
+  margin-top: 5px;
+  filter: drop-shadow(2px 1px 2px grey);
+  /*mix-blend-mode: multiply;*/
+  /*filter: contrast(1);*/
+}
+
 .card-title{
-  text-align: right;
-  margin-right: -5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-top: 5px;
   font-weight: bold;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: normal;
 }
 .card-text{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.card-text-price{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.5;
   font-size: 15px;
-  margin-top: 20px;
-  margin-bottom: 1px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
+
+.btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 50%;
+  border-radius: 3px;
+}
+.nav-link{
+  color:#333;
+  font-family: 'Poppins', sans-serif;
+}
+.nav-item .nav-link{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-link:hover{
+  font-weight: bold;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+}
+
 .fa-stack[data-count]:after{
   text-decoration: none;
   position:absolute;
@@ -103,10 +152,10 @@ body{
   padding:.5em;
   border-radius:999px;
   line-height:.70em;
-  color: rgb(255,165,0);
+  color: rgb(255, 0, 0);
   text-align:center;
   min-width:2em;
-  font-weight:normal;
+  font-weight:600;
   background: #fff;
   font-size: 12px;
 }
@@ -114,7 +163,6 @@ body{
   color:white;
 }
 .red-cart {
-
   color: white; background:#DF0000;
 }
 .footer{
@@ -158,16 +206,16 @@ body{
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php"><strong>Home</strong></a>
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="display_all.php"><strong>Products</strong></a>
+          <a class="nav-link" href="display_all.php">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./user_area/user_registration.php"><strong>Register</strong></a>
+          <a class="nav-link" href="./user_area/user_registration.php">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><strong>Contact Us</strong></a>
+          <a class="nav-link" href="#">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark" style="margin-left:15px; font-weight:bold; margin-top:-7px" href="#"><strong>Total Price: <font size="+2">₱ <?php total_cart_price();?></font></strong></a> 
@@ -184,7 +232,7 @@ cart();
 ?>
 
 <!--second Child -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%; height:25px;">
   <ul class="navbar nav me-auto">
     
           <?php 
@@ -218,10 +266,10 @@ if(!isset($_SESSION['username'])){
 
 <!--fourth child -->
 
-<div class="container">
-    <div class="row mt-2 mb-2 bg-primary">
-      <form action="" method="post" class="bg-primary mt-4 mb-0">
-        <table class="table table-bordered text-center">
+<div class="container" style="background-color:#ffbc7e;color:#fff; font-family: 'Poppins', sans-serif; font-size:12px; border-radius:3px;">
+    <div class="row mt-2 mb-2">
+      <form action="" method="post" class="mt-4 mb-0">
+        <table class="table table-bordered text-center" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:300;">
           
             <tbody>
               <!----PHP CODE TO DISPLAY DYNAMIC DATA---->
@@ -259,20 +307,30 @@ if(!isset($_SESSION['username'])){
   ?>
   <thead>
     <tr>
-        <th>Product Title</th>
-        <th>Product Image</th>
-        <th>Quantity</th>
-        <th>Total Price</th>
-        <th>Remove</th>
-        <th colspan='2'>Action Taken</th>
+  <thead>
+        <th style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:normal;" >Product Title</th>
+        <th style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:normal;">Product Image</th>
+        <th style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:normal; width: 20px; margin:4px 0 0;">Quantity</th>
+        <th style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:normal;">Total Price</th>
+        <th style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:normal; width:20px;">Remove</th>
+        <th colspan='2' style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:14px; font-weight:normal; width:40%;">Action Taken</th>
     </tr>
 </thead>
 </body> 
                 <tr>
+                    <td style="vertical-align: middle;"><?php echo $product_title?></td>
+                    <td style="vertical-align: middle;"><img src="./admin_area/product_images/<?php echo $product_image1?>" alt="" style="width:60px; height:60px;" class="cart_img"></td>
+                    <td style="vertical-align: middle;"><input type="text" name="qty" class="form-input "></td>
+                    <style>
+                      input[type=text] {
+                      margin: 4px 0 0;
+                      line-height: normal;
+                      width: 25px;
+                      height: 25px;
+                      }
+                    </style>
 
-                    <td><?php echo $product_title?></td>
-                    <td><img src="./admin_area/product_images/<?php echo $product_image1?>" alt="" class="cart_img"></td>
-                    <td><input type="text" name="qty" class="form-input w-50"></td>
+
                     <?php 
 $get_ip_add = getIPAddress();
 if(isset($_POST['update_cart'])){
@@ -282,19 +340,27 @@ if(isset($_POST['update_cart'])){
     $total_price=$total_price*$quantities;
 }                    
                     ?>
-                    <td><strong><?php echo $price_table?></strong> </td>
-                    <td><input type="checkbox" name="removeitem[]" value="<?php echo $product_id ?>"></td>
-                    <td>
+                    <td style="vertical-align: middle; font-size:14px;"><strong><?php echo $price_table?></strong> </td>
+                    <style>
+                      input[type=checkbox] {
+                      margin: 4px 0 0;
+                      line-height: normal;
+                      width: 25px;
+                      height: 25px;
+                      }
+                    </style>
+                    <td style="vertical-align: middle; font-size:20px;"><input type="checkbox" name="removeitem[]" value="<?php echo $product_id ?>"></td>
+                    <td style="vertical-align: middle;">
                         <!---<button class="bg-info px-3 border-0 mx-2">Update</button>--->
-                        <input type="submit" value="Update Cart" class="bg-info px-3 border-0 mx-2" name="update_cart">
+                        <input type="submit" value="Update Cart" style="vertical-align: middle; padding:5px 5px;background-color:#ff571d;color:#fff;border-radius:3px;" class=" px-3 border-0 mx-2" name="update_cart">
                         <!--<button class="bg-dark px-3 border-0 mx-2 text-light">Remove</button>-->
-                        <input type="submit" value="Remove Cart" class="bg-secondary px-3 border-0 mx-2 text-light" name="remove_cart">
+                        <input type="submit" value="Remove Cart" style="vertical-align: middle; padding:5px 5px;color:#fff;border-radius:3px;" class="bg-secondary px-3 border-0 mx-2 text-light" name="remove_cart">
                     </td>
                 </tr>
 <?php   }}}
 
 else{
-  echo "<h2 class='text-center text-warning'><strong>CART IS EMPTY</strong></h2>";
+  echo "<h5 class='text-center' style='background-color:#ff571d;color:#fff;font-family: Poppins, sans-serif;font-size:18px;font-weight:bold; margin-top:-15px; border-radius:3px; width:20%; padding: 5px 10px;'><strong>CART IS EMPTY</strong></h5>";
 }
 ?>            
             </tbody>
@@ -308,11 +374,11 @@ $cart_query="select * from `cart_details` where ip_address='$get_ip_add'";
 $result=mysqli_query($conn,$cart_query);
 $result_count=mysqli_num_rows($result);
 if($result_count>0){
-  echo "<h4 class='px-3'>Subtotal: <strong class='text-dark'> ₱ $total_price </strong></h4>
-  <input type='submit' value='Continue Shopping' class='bg-info px-3 py2 border-0 mx-3' name='continue_shopping'>
-  <button class='bg-secondary px-3 py-2 border-0 text-light'><a class='text-light text-decoration-none' href='./user_area/checkout.php'>Checkout</a></button>";
+  echo "<h4 class='px-3' style='font-size:20px; font-weight:500; vertical-align:middle; color:#db6900;'>Subtotal: <strong class='text-dark'> ₱ $total_price </strong></h4>
+  <input type='submit' value='Continue Shopping' class='px-3 py2 border-0 mx-3' style='vertical-align: middle; padding:5px 5px;background-color:#ff571d;color:#fff;border-radius:3px; font-size:14px;' name='continue_shopping'>
+  <button class='bg-secondary px-3 py-2 border-0 text-light' style='vertical-align: middle; padding:5px 5px;color:#fff;border-radius:3px; font-size:14px;'><a class='text-light text-decoration-none' href='./user_area/checkout.php'>Checkout</a></button>";
 }else{
-  echo " <input type='submit' value='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>";
+  echo " <input type='submit' value='CONTINUE SHOPPING' class='border-0' name='continue_shopping' style='background-color:grey;color:#fff;font-family: Poppins, sans-serif;font-size:12px;font-weight:bold; margin-top:-15px; border-radius:3px; width:20%; padding: 5px 10px;margin-left:-1px;'>";
 }            
 if(isset($_POST['continue_shopping'])){
   echo "<script>window.open('index.php','_self')</script>";
@@ -347,8 +413,8 @@ echo $remove_item=remove_cart_item();
 </div>
 <!-- FOOTER---->    
 
-<div class="footer">
-    <p style="margin-bottom: 5px;">All rights reserved @ Designed by A. A. CORBETA - 2023  </p> 
+  <div class="footer">
+    <p style="margin-bottom:0px">All rights reserved &nbsp;&#x26AB; Designed by A. A. Corbeta - 2023</p> 
        <span> <a href="https://www.facebook.com/" class="uil uil-facebook-f" target="_blank"></a></span>&nbsp;&nbsp;  <span><a href="https://ph.linkedin.com/" class="uil uil-linkedin" target="_blank"></a></span>&nbsp;&nbsp;  <span><a href="https://twitter.com/" class="uil uil-twitter" target="_blank"></a></span>&nbsp;&nbsp;  <span><a href="https://www.instagram.com/" class="uil uil-instagram-alt" target="_blank"></a></span> 
   </div>
 

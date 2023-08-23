@@ -21,8 +21,19 @@ session_start();
     <!-- Fontawesome link -->
     <!-- for icons  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.css" integrity="sha512-2dJkRM/DmWkZqINs3QixNKKsgG9mlBT9/PieLVF8OEGHCpPNBoPFYmGPL/yD7JuQVVm2IESF5K0zTDBaf4qehQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://kit.fontawesome.com/adadafda03.js" crossorigin="anonymous"></script>
+
+    <script>
+      const activePage = window.location.pathname;
+      const navLinks =document.querySelectorAll('nav a').forEach(link => {
+        if(link.href.includes(`${activePage}`)){
+          link.classList.add('active');
+        }
+      })
+    </script>
     <!-- style.css -->
     <link rel="stylesheet" href="style.css">
 
@@ -32,6 +43,7 @@ session_start();
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap'); 
 
 body{
   text-shadow: 0px 0px 1px #fff;
@@ -54,26 +66,14 @@ body{
   margin-right: 3px;
 
 }
-.card-img-top{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
-  padding: 0 15px;
-  width: 40%;
-  height: 30%;
-  margin-top: 10px;
-  filter: drop-shadow(2px 2px 3px black);
-  /*mix-blend-mode: multiply;*/
-  /*filter: contrast(1);*/
-}
+
 .card{
   box-shadow: 0px 0px 2px 2px lightgray;
+  background-color: #fffef8;
   padding: 5px 10px ;
   height: 97%;
   width: 97%;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: -55px;
   margin-top: 8px;
   margin-bottom: 3px;
@@ -87,9 +87,25 @@ body{
   border-radius: 5px;
 }
 
+.card-img-top{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  width: 40%;
+  height: 50%;
+  margin-top: 8px;
+  filter: drop-shadow(2px 1px 2px grey);
+  /*mix-blend-mode: multiply;*/
+  /*filter: contrast(1);*/
+}
+
 .card-title{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
+  margin-top: 5px;
   font-weight: bold;
   display: block;
   margin-right: auto;
@@ -101,7 +117,7 @@ body{
   text-align: center;
   line-height: 1.5;
   font-size: 13px;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 25px;
   font-weight: normal;
 }
@@ -124,6 +140,19 @@ body{
   width: 50%;
   border-radius: 3px;
 }
+
+.navbar-nav > .active > a {
+  color: aqua !important;;
+}
+.nav-item > a:hover {
+  color: aqua;
+}
+.active{
+    color:aqua !important;
+}
+.navbar-nav > .active  a{
+    color : aqua !important;
+}
 .nav-link{
   color:#333;
   font-family: 'Poppins', sans-serif;
@@ -133,9 +162,14 @@ body{
   font-size: 15px;
   font-weight: 500;
 }
-
+.nav-link:focus {
+  color: aqua !important;
+}
+.active a{
+  color: red !important;
+}
 .nav-link:hover{
-  font-weight: bold;
+  font-weight: normal;
   color:#fff;
   font-family: 'Poppins', sans-serif;
 }
@@ -150,10 +184,10 @@ body{
   padding:.5em;
   border-radius:999px;
   line-height:.70em;
-  color: rgb(255,165,0);
+  color: rgb(255, 0, 0);
   text-align:center;
   min-width:2em;
-  font-weight:normal;
+  font-weight:600;
   background: #fff;
   font-size: 12px;
 }
@@ -260,34 +294,34 @@ img{
     color: white;
   }
   10% {
-    color: blue;
+    color: 	#FFFDD0;
   }
   20% {
-    color: green;
+    color: #F9F6EE;
   }
   30% {
-    color: blue;
+    color: 	#F5F5DC;
   }
   40% {
-    color: white;
+    color: #EDEADE;
   }
   50% {
-    color: blue;
+    color: #FFFFF0;
   }
   60% {
-    color: white;
+    color: #FFF;
   }
   70% {
-    color: blue;
+    color: #FAF9F6;
   }
   80% {
-    color: green;
+    color: #FCF5E5;
   }
   90% {
-    color: white;
+    color: #FCF5E5;
   }
   100% {
-    color: blue;
+    color: #E9DCC9;
   }
 }
 .navbar-toggler:focus {
@@ -574,7 +608,7 @@ font-size: 10px;
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="display_all.php">My Pharmacy</a>
+          <a class="nav-link active" href="display_all.php">My Pharmacy</a>
         </li>
 
         <li class="nav-item">
@@ -582,23 +616,87 @@ font-size: 10px;
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="./user_area/contact.php">Contact Us</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart"></i><strong><sup></sup></strong></a>
+          <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart" style="font-size:15px;margin-left:-3px;"></i><sup></sup></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#" style="margin-left:15px;"><span>Total Price: <font size="+1"><strong>₱ <?php total_cart_price();?></strong></font></span></a> 
+          <a class="nav-link" href="#" style="margin-left:15px;font-family: 'Poppins', sans-serif;margin-top:-3px;"><span>Total Price: <font size="+1"><strong>₱ <?php total_cart_price();?></strong></font></span></a> 
         </li>
 
       </ul>
 
       <form class="d-flex" action="search_product.php" method="get">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-<!--<button class="btn btn-outline-light" type="submit">Search</button>--->
-        <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
+          <table class="elementsContainer">
+            <tr>
+              <td>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search_data">
+              </td>
+              <!--<td>&nbsp;
+              <a href=""><i class="fa-solid fa-magnifying-glass" type="submit" name="search_data_product" style="color:#fff;"></i></a>
+              </td>-->
+              <!--<button class="btn btn-outline-light" type="submit">Search</button>--->
+                  
+              <button type="submit" class="btn" name="search_data_product" style="color:#333; font-size: 5px;line-height:1px;padding:5px; vertical-align:middle; margin-left:-5px;"><i class="fa-solid fa-magnifying-glass fa-rotate-90" style="color:#333; font-size: 18px;"></i></button>
+              </tr>    
+          </table>      
+
+<style>     
+   button{
+     color: white; 
+     padding: 12px 14px; 
+     font-size: 20px;
+     cursor: pointer; 
+     border:0;
+     background:none;
+     border-radius: 50px;
+     float: right;
+     vertical-align: middle;
+     outline: none;
+     margin-top: 5px;
+  }    
+  button:hover{
+    color: #fff;
+  }
+  .d-flex {
+    background-color: #ffaa5b;
+    float: right;
+    position: relative;
+    height: 42px;
+    text-decoration: none;
+    border: 3px solid  #fe7a00;
+    outline: none;
+    border-radius: 50px;
+    padding: 0px 10px;
+    width: 300px;
+    margin-top: 5px;
+    outline:none;
+    
+   }
+  .elementsContainer{
+    width: 750%;
+    height: 100%;
+    vertical-align: middle;    
+  }
+  .form-control{
+    border: none;
+    height: 80%;
+    width: 100%;
+    padding: 0px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #fff;
+  }
+  .form-control:focus{
+    outline: none;
+  }
+
+</style>
       </form>
     </div>
   </div>
@@ -609,7 +707,7 @@ cart();
 ?>
 
 <!--second Child -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffbc7e; padding:0px; width:100%;height:50px;">
   <ul class="navbar nav me-auto">
     
     <?php 
@@ -636,7 +734,7 @@ if(!isset($_SESSION['username'])){
   </ul>
 </nav>
 <!--third child -->
-<div class="container-image" style="background-color: #ff571d; padding:20px; width:101%; position : sticky; ">
+<div class="container-image" style="background-color: #ff571d; padding:20px; width:101%; position : sticky;">
    
    <p class="awesome" style="font-family: 'Poppins', sans-serif; text-align: center; height:5px; margin-top:-22px;  margin-left: -14px; font-size:15px; position : sticky; ">GARANTISADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAMOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26AB;&nbsp;&nbsp;&nbsp;BAGO</p>
 </div>

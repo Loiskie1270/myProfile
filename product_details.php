@@ -657,7 +657,7 @@ if(!isset($_SESSION['username'])){
 
 <!--display products -->
     <div class="row">
-        
+         
 <!--fetch products -->
 
  <?php 

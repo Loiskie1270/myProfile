@@ -28,6 +28,17 @@ session_start();
 
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/adadafda03.js" crossorigin="anonymous"></script>
+
+    <script>
+      const activePage = window.location.pathname;
+      const navLinks =document.querySelectorAll('nav a').forEach(link => {
+        if(link.href.includes(`${activePage}`)){
+          link.classList.add('active');
+        }
+      })
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas
     +Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap" rel="stylesheet">
 
@@ -36,7 +47,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap'); 
 
 body{
   text-shadow: 0px 0px 1px #fff;
@@ -75,12 +86,13 @@ body{
 }
 .card{
   box-shadow: 0px 0px 2px 2px lightgray;
+  background-color: #fffef8;
   padding: 5px 10px ;
   height: 97%;
   width: 97%;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: -55px;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 3px;
   column-gap: 1px;
   caret-color: transparent;
@@ -125,22 +137,46 @@ body{
   width: 50%;
   border-radius: 3px;
 }
+
+
+.navbar-nav > .active > a {
+  color: aqua !important;
+}
+
+.nav-item > a:hover {
+  color: aqua;
+}
+
+.active{
+    color:aqua !important;
+}
+
 .nav-link{
   color:#333;
   font-family: 'Poppins', sans-serif;
 }
+
 .nav-item .nav-link{
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
 
+.nav-link:focus {
+  color: aqua !important;
+}
+
+.active a{
+  color: red !important;
+}
+
 .nav-link:hover{
-  background-color: #ff571d;
-  font-weight: bold;
+  font-weight: normal;
   color:#fff;
   font-family: 'Poppins', sans-serif;
 }
+
+
 .fa-stack[data-count]:after{
   text-decoration: none;
   position:absolute;
@@ -151,10 +187,10 @@ body{
   padding:.5em;
   border-radius:999px;
   line-height:.70em;
-  color: rgb(255,165,0);
+  color: rgb(255, 0, 0);
   text-align:center;
   min-width:2em;
-  font-weight:normal;
+  font-weight:600;
   background: #fff;
   font-size: 12px;
 }
@@ -591,20 +627,86 @@ font-size: 10px;
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart"></i><strong><sup></sup></strong></a>
+          <a class="nav-link fa-stack fa-1x has-badge" data-count="<?php cart_item();?>" href="cart.php"><i class="fa fa-shopping-cart" style="font-size:15px;margin-left:-3px;"></i><sup></sup></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#" style="margin-left:15px;"><span>Total Price: <font size="+1"><strong>₱ <?php total_cart_price();?></strong></font></span></a> 
+          <a class="nav-link" href="#" style="margin-left:15px;font-family: 'Poppins', sans-serif;margin-top:-3px;"><span>Total Price: <font size="+1"><strong>₱ <?php total_cart_price();?></strong></font></span></a> 
         </li>
+
       </ul>
 
       <form class="d-flex" action="" method="get">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-        <!--<button class="btn btn-outline-light" type="submit">Search</button>--->
-        <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
+
+      <table class="elementsContainer">
+            <tr>
+              <td>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search_data">
+              </td>
+              <!--<td>&nbsp;
+              <a href=""><i class="fa-solid fa-magnifying-glass" type="submit" name="search_data_product" style="color:#fff;"></i></a>
+              </td>-->
+              <!--<button class="btn btn-outline-light" type="submit">Search</button>--->
+                  
+              <button type="submit" class="btn" name="search_data_product" style="color:#333; font-size: 5px;line-height:1px;padding:5px; vertical-align:middle; margin-left:-5px;"><i class="fa-solid fa-magnifying-glass fa-rotate-90" style="color:#333; font-size: 18px;"></i></button>
+              </tr>     
+          </table>    
       </form>
 
+      <style> 
+  button{
+     color: white; 
+     padding: 12px 14px; 
+     font-size: 20px;
+     cursor: pointer; 
+     border:0;
+     background:none;
+     border-radius: 50px;
+     float: right;
+     vertical-align: middle;
+     outline: none;
+     margin-top: 5px;
+  }    
+  button:hover{
+    color: #fff;
+  }
+  .d-flex {
+    background-color: #ffaa5b;
+    float: right;
+    position: relative;
+    height: 42px;
+    text-decoration: none;
+    border: 3px solid  #fe7a00;
+    outline: none;
+    border-radius: 50px;
+    padding: 0px 10px;
+    width: 300px;
+    margin-top: 5px;
+    outline:none;
+    
+   }
+  .elementsContainer{
+    width: 750%;
+    height: 100%;
+    vertical-align: middle;    
+  }
+  .form-control{
+    border: none;
+    height: 80%;
+    width: 100%;
+    padding: 0px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #fff;
+  }
+  .form-control:focus{
+    outline: none;
+  }
+
+</style>
+      
     </div>
   </div>
 </nav>
