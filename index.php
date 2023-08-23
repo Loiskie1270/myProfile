@@ -249,6 +249,12 @@ body{
   font-size: 15px;
   text-decoration: none;
 }
+
+ul li a.nav-link:hover{
+  background-color: #ff9b3f !important;
+  color: #fff !important;
+}
+
 .container-image{
   background-color: #FFD833;
 }
@@ -927,8 +933,8 @@ getcategories();
                                 <img src="./images/headache.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="First One">
                             </div>
                             <div class="right-content">
-                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Headache</h4>
-                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">Headache has variety of type & should not neglected, we suggest early intervention save lives.</p>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:15px;">Headache</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:13px; font-weight:200; color: grey; margin-bottom:5px;line-height: normal;">Headache has variety of type & should not neglected, we suggest early intervention save lives.</p>
                                 <a href="#features" class="text-button" id="myButton"><strong>Discover More</strong></a>
                             </div>
 
@@ -936,14 +942,14 @@ getcategories();
 
                             <div id="myPopup" class="popup">
                             <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
-                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                            <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:18px;font-weight:bold;">
                                         HEADACHE
-                                        <br>
-                                        <img src="./images/headachetwo.png" alt="" style="width:35%;display:block;margin-right:auto;margin-left:auto; margin-top:20px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        
+                                        <img src="./images/headachetwo.png" alt="" style="width:30%;display:block;margin-right:auto;margin-left:auto; margin-top:20px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
 
-                                          <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Headache causes many things and should not be neglected that might cause harm or fatal to your patient.</p>
+                                          <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;line-height: normal;font-weight:normal;">Headache causes many things and should not be neglected that might cause harm or fatal to your patient.</p>
 
-                                          <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">There are many different types of headaches, so identifying the location and nature of your pain can help determine the cause.
+                                          <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;line-height:normal;font-weight:normal;">There are many different types of headaches, so identifying the location and nature of your pain can help determine the cause.
                                           Some of the most common types include:</p>
     
                                    </h5>
@@ -960,8 +966,8 @@ getcategories();
                                 <img src="./images/highblood.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="second one">
                             </div>
                             <div class="right-content">
-                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">High Blood Pressure</h4>
-                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">High blood pressure if negleted will caused fatal to the patient, we recommend to visit nearest clinic or hospital for better treatment.</p>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:15px;">High Blood Pressure</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:13px; font-weight:200; color: grey; margin-bottom:5px;line-height: normal;">High blood pressure if negleted will caused fatal to the patient, we recommend to visit nearest clinic or hospital for better treatment.</p>
                                 <a href="#features" class="text-button" id="myButton2"><strong>Discover More</strong></a>
                             </div>
 
@@ -969,12 +975,12 @@ getcategories();
 
                             <div id="myPopup2" class="popup">
                               <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
-                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                              <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:18px;font-weight:bold;">
                                         HIGH BLOOD PRESSURE
-                                        <br>
-                                        <img src="./images/highbloodtwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">If you have high blood pressure, you must know that what your daily meal can make a difference. You must follow strict diet like the dietary approaches to stop hypertension...</p>
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Many people out there, taking their blood pressure anywhere is a crucial step in monitoring their health, wearing smart watches reduce difficulty to monitor bp. It’s essential to get an accurate reading, but there...</p>
+                                        
+                                        <img src="./images/highbloodtwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:30%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;line-height: normal;font-weight:normal;">If you have high blood pressure, you must know that what your daily meal can make a difference. You must follow strict diet like the dietary approaches to stop hypertension...</p>
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;line-height:normal;font-weight:normal;">Many people out there, taking their blood pressure anywhere is a crucial step in monitoring their health, wearing smart watches reduce difficulty to monitor bp. It’s essential to get an accurate reading, but there...</p>
                                     </h5>
                                   
                                   <button id="closePopup2" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
@@ -989,20 +995,20 @@ getcategories();
                                 <img src="./images/muscleproblem.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="third gym training">
                             </div>
                             <div class="right-content">
-                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Muscle Problem</h4>
-                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">As we reach a certain age muscle meet various problems, this is the reason regular visit to your doctor is highly recommended.</p>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:15px;">Muscle Problem</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:13px; font-weight:200; color: grey; margin-bottom:5px;line-height: normal;">As we reach a certain age muscle meet various problems, this is the reason regular visit to your doctor is highly recommended.</p>
                                 <a href="#features" class="text-button" id="myButton3"><strong>Discover More</strong></a>
                             </div>
 
 <!-----POP-UP3 WINDOW--->                              
                             <div id="myPopup3" class="popup">
                               <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
-                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                              <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:18px;font-weight:bold;">
                                         MUSCLE PROBLEM
-                                        <br>
+                                        
                                         <img src="./images/muscleproblemtwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Your limbs contain different compartments, which are sets of muscles, nerves, and blood vessels that are covered by a tough tissue called fascia. If you experience swelling or bleeding within one of these compartments, the pressure can lead to great discomfort in your muscles.</p>
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">The muscles in your body are surrounded by fascia, which is a tough connective tissue. With myofascial pain syndrome (MFS), this tissue becomes inflamed, which can lead to considerable discomfort in your muscles. </p>
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px; line-height: normal;font-weight:normal;">Your limbs contain different compartments, which are sets of muscles, nerves, and blood vessels that are covered by a tough tissue called fascia. If you experience swelling or bleeding within one of these compartments, the pressure can lead to great discomfort in your muscles.</p>
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px; line-height: normal;font-weight:normal;">The muscles in your body are surrounded by fascia, which is a tough connective tissue. With myofascial pain syndrome (MFS), this tissue becomes inflamed, which can lead to considerable discomfort in your muscles. </p>
                                     </h5>
                                  
                                   <button id="closePopup3" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
@@ -1021,8 +1027,8 @@ getcategories();
                                 <img src="./images/childmedicine.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="fourth muscle">
                             </div>
                             <div class="right-content">
-                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Child Medicine</h4>
-                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">Many parents are concerned about their child health way better than neglecting your child;s health.</p>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:15px;">Child Medicine</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:13px; font-weight:200; color: grey; margin-bottom:5px;line-height: normal;">Many parents are concerned about their child health way better than neglecting your child;s health.</p>
                                 <a href="#features" class="text-button" id="myButton4"><strong>Discover More</strong></a>
                             </div>
 
@@ -1030,11 +1036,11 @@ getcategories();
 
                             <div id="myPopup4" class="popup">
                                 <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
-                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:18px;font-weight:bold;">
                                         CHILD MEDICINE
-                                        <br>
-                                        <img src="./images/childrenmedicinetwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">Although most of the Child Health blog is aimed at parenting topics, it also includes information on child psychology, before-birth tips, growth and development and much more. There are articles on child abuse, nurturing, nursing, seasonal flu, childhood diseases, pollution, childhood eating disorders and nutrition. The Child Health blog even includes recipes for children. It also includes a special section for all things children that include articles on newborn babies, school issues and teenagers.</p>
+                                        
+                                        <img src="./images/childrenmedicinetwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:27%; margin-top:8px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:grid;margin:auto; color:grey; line-height: normal;font-weight:normal;">Although most of the Child Health blog is aimed at parenting topics, it also includes information on child psychology, before-birth tips, growth and development and much more. There are articles on child abuse, nurturing, nursing, seasonal flu, childhood diseases, pollution, childhood eating disorders and nutrition. The Child Health blog even includes recipes for children. It also includes a special section for all things children that include articles on newborn babies, school issues and teenagers.</p>
                                     </h5>
                                   
                                   <button id="closePopup4" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
@@ -1050,8 +1056,8 @@ getcategories();
                                 <img src="./images/motherguide.png" style="width:20%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="training fifth">
                             </div>
                             <div class="right-content">
-                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Mother's Guide</h4>
-                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">Social media helped many mother as guide to their children's health way better than the old days, feel free to message us for more information.</p>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:15px;">Mother's Guide</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:13px; font-weight:200; color: grey; margin-bottom:5px; line-height: normal;">Social media helped many mother as guide to their children's health way better than the old days, feel free to message us for more information.</p>
                                 <a href="#features" class="text-button" id="myButton5"><strong>Discover More</strong></a>
                             </div>
 
@@ -1059,11 +1065,11 @@ getcategories();
 
                             <div id="myPopup5" class="popup">
                                 <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
-                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:18px;font-weight:bold;">
                                         MOTHER'S GUIDE
-                                        <br><br>
-                                        <img src="./images/motherguidetwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">The Mothers Guide received some encouraging feedback from visitors to the event, most of whom were seeing it for the first time. Dr Spiro commented: “There was lots of interest and everyone seemed to like the new guide. I think it is brilliant that you have the new ‘laid-back feeding’ included.”</p>
+                                        
+                                        <img src="./images/motherguidetwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:30%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px; line-height: normal;font-weight:normal;">The Mothers Guide received some encouraging feedback from visitors to the event, most of whom were seeing it for the first time. Dr Spiro commented: “There was lots of interest and everyone seemed to like the new guide. I think it is brilliant that you have the new ‘laid-back feeding’ included.”</p>
                                     </h5>
                                   
                                   <button id="closePopup5" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
@@ -1078,8 +1084,8 @@ getcategories();
                                 <img src="./images/br5.png" style="width:21%; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); background-image: linear-gradient(to right, red , orange); border-radius: 5px" alt="gym training">
                             </div>
                             <div class="right-content">
-                                <h4 style="font-family: 'Poppins', sans-serif;font-size:17px;">Branded & Generics</h4>
-                                <p style="font-family: 'Poppins', sans-serif;font-size:14px; font-weight:200; color: grey; margin-bottom:5px">This web app will suggest about branding such as branded and generics, simply send a message us and we will do our very best to answer your query.</p>
+                                <h4 style="font-family: 'Poppins', sans-serif;font-size:15px;">Branded & Generics</h4>
+                                <p style="font-family: 'Poppins', sans-serif;font-size:13px; font-weight:200; color: grey; margin-bottom:5px;line-height: normal;font-weight:normal;">This web app will suggest about branding such as branded and generics, simply send a message us and we will do our very best to answer your query.</p>
                                 <a href="#features" class="text-button" id="myButton6"><strong>Discover More</strong></a>
                             </div>
 
@@ -1087,11 +1093,11 @@ getcategories();
 
                             <div id="myPopup6" class="popup">
                                 <div class="popup-content" style="width:70%; height:70%; display:flex; align-items: center; justify-content: center; margin-top:90px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); border-radius:5px;">
-                                  <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:25px;">
+                                <h5 style="color:#ff571d; display:block;margin-left:auto;margin-right:auto; font-size:18px;font-weight:bold;">
                                         BRANDED & GENERICS
-                                        <br><br>
-                                        <img src="./images/brandedgenericstwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:35%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
-                                        <p style="font-family: 'Poppins', sans-serif;font-size:14px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px;">When a new drug is discovered, the company that discovered it would apply for patency to prevent other companies from producing and selling the drug. This patency may take up to 20 years and during this period, the company will produce and sell the drug under a brand name to recover its investment and make a profit. With time, this name becomes synonymous with the drug. But after the patency expires, other companies are allowed to produce a similar drug. It is what gave rise to brand and generic name in drugs.</p>
+                                        
+                                        <img src="./images/brandedgenericstwo.png" alt="" style="display:block;margin-right:auto;margin-left:auto; width:28%; margin-top:10px; margin-bottom:15px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);border-radius: 3px;">
+                                        <p style="font-family: 'Poppins', sans-serif;font-size:11px; line-height: 1; display:block;margin-right:auto;margin-left:auto; color:grey; margin-bottom:10px; line-height: normal;font-weight:normal;">When a new drug is discovered, the company that discovered it would apply for patency to prevent other companies from producing and selling the drug. This patency may take up to 20 years and during this period, the company will produce and sell the drug under a brand name to recover its investment and make a profit. With time, this name becomes synonymous with the drug. But after the patency expires, other companies are allowed to produce a similar drug. It is what gave rise to brand and generic name in drugs.</p>
                                     </h5>
                                  
                                   <button id="closePopup6" style="background-color:#fff; border:none; text-decoration:none; margin-top:310px; margin-bottom:-50px; padding:0px 0px 0px 0px;">
@@ -1114,8 +1120,8 @@ getcategories();
                                           <img src="./images/botikalogo2.png" alt="">
                                         </div>
                                         <div class="about-content">
-                                          <h3 style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 500; width:140%; text-align:justify; color: #fff; margin-top:30px; margin-bottom:30px;">"Share Love to Others"</h3>
-                                          <p style="font-family: 'Poppins', sans-serif; font-size: 13px; font-weight:500; width:140%; text-align:justify; color: #fff;">Botika Pharmacy, the beloved pharmacy nowadays in the community, well known as offers quality and affordable medicine. Considered as provide medicine true enough with genuine brands direct from well-known pharmaceuthical company in the country.</p>
+                                          <h3 style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; width:140%; text-align:justify; color: #fff; margin-top:30px; margin-bottom:30px;">"Share Love to Others"</h3>
+                                          <p style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight:500; width:140%; text-align:justify; color: #fff; line-height: normal;">Botika Pharmacy, the beloved pharmacy nowadays in the community, well known as offers quality and affordable medicine. Considered as provide medicine true enough with genuine brands direct from well-known pharmaceuthical company in the country.</p>
                                           
                                         </div>
                                       </section>
@@ -1144,10 +1150,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc1" style="appearance:none; ">
                                         <label for="acc1" style="display:flex; align-items:center; cursor:pointer; ">
                                           <h3>01</h3>
-                                          <h4 style="font-size:15px;">May i know your exact location?</h4>
+                                          <h4 style="font-size:14px; line-height: normal;">May i know your exact location?</h4>
                                         </label>
 
-                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif;">I want to visit your place and i want to see all products available there, may i know where we can find your pharmacy? Thank you</p>
+                                        <div class="content-faq"><p style="font-size:12px;font-family: 'Poppins', sans-serif; line-height: normal;">I want to visit your place and i want to see all products available there, may i know where we can find your pharmacy? Thank you</p>
                                         </div>
 
                                       </div>
@@ -1157,10 +1163,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc2" style="appearance:none; ">
                                         <label for="acc2" style="display:flex; align-items:center; cursor:pointer;">
                                           <h3>02</h3>
-                                          <h4 style="font-size:15px;">Is Generic a good medicine?</h4>
+                                          <h4 style="font-size:14px; line-height: normal;">Is Generic a good medicine?</h4>
                                         </label>
 
-                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif;">Will you please suggest to your customer's any information about generics? as customer your suggestion is highly appreciated.</p>
+                                        <div class="content-faq"><p style="font-size:12px;font-family: 'Poppins', sans-serif; line-height: normal;">Will you please suggest to your customer's any information about generics? as customer your suggestion is highly appreciated.</p>
                                         </div>
 
                                       </div>
@@ -1170,10 +1176,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc3" style="appearance:none; ">
                                         <label for="acc3" style="display:flex; align-items:center; cursor:pointer;">
                                           <h3>03</h3>
-                                          <h4 style="font-size:15px;">What is your thought about branded and generic medicine?</h4>
+                                          <h4 style="font-size:14px; line-height: normal;">What is your thought about branded and generic medicine?</h4>
                                         </label>
 
-                                        <div class="content-faq"><p style="font-size:13px;font-family: 'Poppins', sans-serif;">As pharmay owner what is your recommendation to your client regarding usage of branded and generic medicine. Your response is highly appreciated.</p>
+                                        <div class="content-faq"><p style="font-size:12px;font-family: 'Poppins', sans-serif; line-height: normal;">As pharmay owner what is your recommendation to your client regarding usage of branded and generic medicine. Your response is highly appreciated.</p>
                                         </div>
 
                                       </div>
@@ -1183,10 +1189,10 @@ getcategories();
                                         <input type="radio" name="acc" id="acc4" style="appearance:none; ">
                                         <label for="acc4" style="display:flex; align-items:center; cursor:pointer;">
                                           <h3>04</h3>
-                                          <h4 style="font-size:15px;">Would you suggest any medication for my headache?</h4>
+                                          <h4 style="font-size:14px; line-height: normal;">Would you suggest any medication for my headache?</h4>
                                         </label>
                                         
-                                        <div class="content-faq"><p style="font-size:13px; font-family: 'Poppins', sans-serif;">I usually suffering headache and I don't have enought time to visit available doctor in town, I'm wondering if you would suggest medication for this?</p>
+                                        <div class="content-faq"><p style="font-size:12px; font-family: 'Poppins', sans-serif; line-height: normal;">I usually suffering headache and I don't have enought time to visit available doctor in town, I'm wondering if you would suggest medication for this?</p>
                                         </div>
 
                                       </div>
