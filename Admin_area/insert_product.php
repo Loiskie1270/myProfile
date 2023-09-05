@@ -43,50 +43,135 @@ if(isset($_POST['insert_product'])){
  <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Insert Products - Admin Dashboard</title>
+    <title>Admin - Insert Product</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
          <!---Bootstrap CSS LINK------>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
     <!-- Fontawesome link -->
  <!-- for icons  -->
- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.css" integrity="sha512-2dJkRM/DmWkZqINs3QixNKKsgG9mlBT9/PieLVF8OEGHCpPNBoPFYmGPL/yD7JuQVVm2IESF5K0zTDBaf4qehQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.css" integrity="sha512-2dJkRM/DmWkZqINs3QixNKKsgG9mlBT9/PieLVF8OEGHCpPNBoPFYmGPL/yD7JuQVVm2IESF5K0zTDBaf4qehQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="stylesheet" href="../style.css">
 <style>
+body{
+        background-color:#f5ffcf;
+        color:#fff;
+        background-image: url('../images/background_botika.png');
+        backdrop-filter: blur(1px);
+        color: transparent;
+        caret-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+.container-insert{
+        background-color:#eecc99;
+        color:#fff;
+        font-family: 'Poppins', sans-serif;
+        font-size:15px;
+        max-width: 100%;
+        width: 500px;
+        max-height:100%;
+        height: 680px;
+        border-radius:5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 3px 3px 3px 5px rgb(0,0,0,0.3);
+        padding: 5px 5px;
+
+    }
+form{
+        background-color:#f89851;
+        color:#fff;
+        max-width: 100%;
+        width: 450px;
+        height: 600px;
+        margin-top: -7px;
+        border-radius:5px;
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
+        font-family: 'Poppins', sans-serif;
+        font-size:13px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h3{
+        background-color:#ff571d;
+        color:#fff;
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
+        font-family: 'Poppins', sans-serif;
+        font-size:15px;
+        width:200px;
+        padding:10px 5px 10px 5px;
+        border-top-right-radius:8px;
+        border-top-left-radius:8px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        caret-color:transparent;
+        margin-top:15px;
+    }
+
+.form-outline{
+        padding: 15px 5px 5px 5px;
+        width:350px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+input{
+        padding: 5px 20px;
+        width:350px;
+        display:block;
+        margin: 0 auto;
+}
+input.btn:hover{
+    background-color: #e67a37 !important;
+    color: darkgreen !important;
+}
+
+
 
 </style>
     
  </head>
- <body style="background-color:#f5ffcf;color:#fff;">
-     <div class="container w-50 mt-3" style="background-color:#f5ffcf;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:100%; border-radius:5px; display:block; margin-left:auto; margin-right:auto;">
-        <h3 class="text-center mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px">INSERT PRODUCTS</h3>
+ <body >
+
+     <div class="container-insert">
+        <h3 class="text-center">INSERT PRODUCTS</h3>
+        <a href="index.php?view_products" style="text-decoration:none;"><img src="../images/home2.png" alt="" style="width:25px;height:23px;margin-top:-82px;margin-left:50px;"></a>
         <!--Form-->
-        <form action="" method="post" enctype="multipart/form-data" style="background-color:#ffbc7e;color:#fff; width:100%;">
-            <div class="form-outline mb-0 m-auto" style="padding: 15px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+        <form action="" method="post" enctype="multipart/form-data" style="margin-top:-30px;">
+            <div class="form-outline">
                 <!--Title-->
                 
-                <input type="text" name="product_title" id="product_title" class="form-control" placeholder="Enter product title" autocomplete="off" required="required">
+                <input type="text" name="product_title" id="product_title" class="form-control" placeholder="Enter Product Title" autocomplete="off" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:15px;margin-bottom:10px;">
             </div>
             <div> 
                 <!--Description-->
-                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
                 
-                <input type="text" name="description" id="description" class="form-control" placeholder="Enter description" autocomplete="off" required="required">
+                <input type="text" name="description" id="description" class="form-control" placeholder="Enter Description" autocomplete="off" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
             
             </div>
             <div> 
                 <!--keyword-->
-                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
                 
-                <input type="text" name="product_keywords" id="product_keywords" class="form-control" placeholder="Enter product keyword" autocomplete="off" required="required">
+                <input type="text" name="product_keywords" id="product_keywords" class="form-control" placeholder="Enter Product Keyword" autocomplete="off" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
             </div>  
             <div> 
                 <!--categories-->
-                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
-                    <select name="product_category" id="" class="form-select">
-                        <option value="">Select Category</option>
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
+                    <select name="product_category" id="" class="form-select" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
+                        <option value="" style="font-family: Poppins;">Select Category</option>
                         <?php 
                                 $select_query="Select * from `categories`";
                                 $result_query=mysqli_query($conn,$select_query);
@@ -107,8 +192,8 @@ if(isset($_POST['insert_product'])){
             </div>
             <div> 
                 <!--Brands-->
-                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
-                    <select name="product_brands" id="" class="form-select">
+                <div class="form-outline mb-0 m-auto" style="padding: 10px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
+                    <select name="product_brands" id="" class="form-select" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:0px;">
                         <option value="">Select Brand</option>
                         <?php 
                                 $select_query="Select * from `brands`";
@@ -129,32 +214,32 @@ if(isset($_POST['insert_product'])){
             </div>
             <div> 
                 <!--Image 1-->
-                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
-                <label for="product_image1" class="form-label text-dark">Insert Image 1</label>
-                <input type="file" name="product_image1" id="product_image1" class="form-control"  required="required">
+                <div class="form-outline" style="padding: 5px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_image1" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:11;color:darkgreen;margin-top:-25px;font-style:italic;">Image 1</label>
+                <input type="file" name="product_image1" id="product_image1" class="form-control"  required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-10px;margin-bottom:0px;">
             </div>  
             <div> 
                 <!--Image 2-->
-                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
-                <label for="product_image2" class="form-label text-dark">Insert Image 2</label>
-                <input type="file" name="product_image2" id="product_image2" class="form-control"  required="required">
+                <div class="form-outline" style="padding: 5px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_image2" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:11;color:darkgreen;margin-bottom:5px;font-style:italic;">Image 2</label>
+                <input type="file" name="product_image2" id="product_image2" class="form-control"  required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:0px;">
             </div> 
             <div> 
                 <!--Image 3-->
-                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
-                <label for="product_image3" class="form-label text-dark">Insert Image 3</label>
-                <input type="file" name="product_image3" id="product_image3" class="form-control"  required="required">
+                <div class="form-outline" style="padding: 5px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_image3" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:11;color:darkgreen;margin-bottom:5px;font-style:italic;">Image 3</label>
+                <input type="file" name="product_image3" id="product_image3" class="form-control"  required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:0px;">
             </div> 
             <div> 
                 <!--price-->
-                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:80%; display:block; margin-left:auto; margin-right:auto;">
-                <label for="product_price" class="form-label text-dark">Product Price</label>
-                <input type="text" name="product_price" id="product_price" class="form-control" placeholder="Enter product price" autocomplete="off" required="required">
+                <div class="form-outline mb-0 m-auto" style="padding: 5px 5px 5px 5px; width:350px; display:block; margin-left:auto; margin-right:auto;">
+                <label for="product_price" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:11;color:darkgreen;margin-bottom:5px;font-style:italic;">Product Price</label>
+                <input type="text" name="product_price" id="product_price" class="form-control" placeholder="Enter product price" autocomplete="off" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:15px;">
             </div> 
             <div> 
                 <!--BUTTON INSERT PRODUCT-->
-                <div class="form-outline mb-4 m-auto" style="padding: 5px 5px 5px 5px; width:50%; display:block; margin-left:auto; margin-right:auto;">
-                <input type="submit" name="insert_product" class="btn mb-2 px-3" value="Insert Products" style="padding: 5px 5px 5px 5px; width:50%; display:block; margin-left:auto; margin-right:auto;background-color:#ff571d;color:#fff;">
+                <div class="form-outline m-auto" style="padding: 5px 15px; width:350px; margin-top:20px; display:block; margin-left:auto; margin-right:auto;">
+                <input type="submit" name="insert_product" class="btn mb-2 px-3" value="Insert Product" style="padding: 5px 5px 5px 5px; width:200px; display:block; margin-left:auto; margin-right:auto;background-color:#ff571d;color:#fff;margin-bottom:5px;font-family: 'Poppins', sans-serif;font-size:14px;">
                 
             </div>    
              

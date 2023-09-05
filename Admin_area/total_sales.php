@@ -1,3 +1,7 @@
+<?php 
+include('../includes/connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,30 +18,11 @@
 
     <script src="https://kit.fontawesome.com/adadafda03.js" crossorigin="anonymous"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootsrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootsrap.min.js"></script>-->
 
-<script>
-    $(document).ready(function()
-    {
-        $('tr').each(function()
-        {
-            var totmarks=0;
-            $(this).find('amount').each(function()
-            {
-                var marks = $(this).text();
-                if(marks.length!==0)
-                {
-                    totmarks+=parseFloat(marks);
-                }
-            });
-            $(this).find('#total_sales').html('=' +totmarks);
-        });
-    });
-    
-</script>
 
-        <!-- Fontawesome link -->
-     <!-- for icons  -->
+    <!-- Fontawesome link -->
+    <!-- for icons  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.css">
@@ -49,16 +34,37 @@
 </head>
 <body class="bg-light">
         <section class="py-5">
-            <div class="container">
+            <div class="container-sales">
+<style>
+body{
+    background-image: url('../images/adminmenu.png');
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    color: transparent;
+    caret-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.container-sales{
+    max-width:100%;
+    width:800px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-25px;
+}
+</style>                
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header" style="background-color:#ee5511;color:#fff;">
-                                <h6 style="font-family: 'Poppins', sans-serif;font-size:15px;caret-color:transparent;vertical-align:middle;">&nbsp;&#x26AB;&nbsp;TOTAL SALES QUERY&nbsp;&#x26AB;&nbsp;Year:Month:Day&nbsp;&#x26AB;&nbsp;</h6>
+                            <div class="card-header" style="background-color:#ee5511;color:#fff;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);margin-bottom:3px;">
+                                <h6 style="font-family: 'Poppins', sans-serif;font-size:15px;caret-color:transparent;text-indent:21px;margin-top:15px;margin-bottom:-15px;">&nbsp;&#x26AB;&nbsp;TOTAL SALES QUERY&nbsp;&#x26AB;&nbsp;Year:Month:Day&nbsp;&#x26AB;&nbsp;</h6> &nbsp;
+                                <a href="index.php?view_products" style="text-decoration:none;"><img src="../images/home2.png" alt="" style="width:25px;height:23px;margin-top:-22px;margin-left:-10px;"></a>
+                                
                             </div>
-                            <div class="card-body" style="background-color:#ffc512;">
+                            <div class="card-body" style="background-color:#ffc512;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);">
 
-                                <form action="" method="GET">
+                                <form action="" method="GET" id="myForm">
                                     <div class="row">
                                         <div class="col-md-4">   
                                             <div class="form-group">
@@ -76,7 +82,8 @@
                                             <div class="form-group">
                                                 <label for="" style="background-color:#ff6611;color:#fff;padding:5px 10px;font-family: 'Poppins', sans-serif;font-size:12px;font-weight:bold;border-radius:3px;caret-color:transparent;">Check</label><br>
                                                 <a href="index.php?pg=home">
-                                                <button type="submit" class="btn btn-primary" style="width:100px;padding:5px 15px;font-family: 'Poppins', sans-serif;font-size:15px;font-weight:bold;border-radius:5px;">Filter</button>
+                                                <button type="submit" class="btn btn-primary" id="btn" style="width:100px;padding:5px 15px;font-family: 'Poppins', sans-serif;font-size:15px;font-weight:normal;border-radius:5px;">Filter</button>
+                                                
                                                 </a>
                                             </div>    
                                         </div>
@@ -86,7 +93,7 @@
                             </div>
                         </div>
 
-                        <div class="card mt-3">
+                        <div class="card mt-3" style="background-color:#ffc512;max-width:100%;width:800px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);">
                             <div class="card-body" style="background-color:#ffc512;">
                                 <h6 style="background-color:#ee5511;color:#fff;max-width:100%;width:150px;padding: 10px 20px;text-align:center;font-family: 'Poppins', sans-serif;font-size:18px;
                                 box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);display:block;margin-left:auto;margin-right:auto;caret-color:transparent;">Your Sales</h6>
@@ -113,6 +120,7 @@
 
                                                 $conn = mysqli_connect("localhost","root","","pebstore");
                                                 $total_sales=0;
+                                                //echo number_format($total_sales,2);
                                                 $query = "select * from user_payments where date BETWEEN '$from_date' AND '$to_date'";
                                                 $query_run = mysqli_query($conn,$query);
 
@@ -126,7 +134,7 @@
                                                                 <td style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;font-weight:normal;"><?php echo $row['order_id']; ?></td>
                                                                 <td style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;font-weight:normal;"><?php echo $row['invoice_number']; ?></td>
                                                                 <td style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;font-weight:normal;"><?php echo $row['payment_mode']; ?></td>
-                                                                <td class="netPrice" style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:14px;text-align:center;caret-color:transparent;font-weight:bold;"><?php echo $row['amount']; ?></td>
+                                                                <td class="netPrice" id="money" style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:14px;text-align:center;caret-color:transparent;font-weight:bold;"> <?php echo number_format( $row['amount'],2); ?></td>
 
                                                             </tr>
                                                        <?php 
@@ -154,32 +162,39 @@
                                     ?>
                                     <tfoot>
                                         <tr>
-                                            <td colspan="3" style="padding: 10px 20px;font-family: 'Poppins', sans-serif;font-size:17px;vertical-align:middle;">Total (by: Filtered Date)</td>
-                                            <td id="total" style="vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:15px;text-align:center;caret-color:transparent;font-weight:bold;">0</td>
+                                            <td colspan="3" style="padding: 10px 20px;font-family: 'Poppins', sans-serif;font-size:15px;vertical-align:middle;">Total&nbsp;<font size="1">&#x26AB;</font>&nbsp;<span style="font-family: 'Poppins', sans-serif;font-size:12px;">by: Filtered Date</span>&nbsp;<font size="1">&#x26AB;</font> &nbsp;</td>
+                                            <td id="total" class="sign" style="vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:15px;text-align:center;caret-color:transparent;font-weight:bold;">₱ </td>
                                         </tr>
                                     </tfoot>
                                     <?php
                                     
                                     $results = mysqli_query($conn, "SELECT sum(amount) FROM user_payments");
                                     while($rows = mysqli_fetch_array($results)){?>
-                                  <span style="background-color:green;color:#fff;padding:5px 10px;font-family: 'Poppins', sans-serif;font-size:17px;display:block;margin-left:auto;margin-right:auto;max-width:100%; width:800px;"> Grand Total Sales :<font size="+1"><strong>&nbsp;₱ <?php echo $rows['sum(amount)']; ?> </font> </span>
+                                  <span style="background-color:green;color:#fff;padding:5px 10px;font-family: 'Poppins', sans-serif;font-size:17px;display:block;margin-left:auto;margin-right:auto;max-width:100%; width:800px;caret-color:transparent;"> Grand Total Sales :<font size="+1"><strong>&nbsp;&nbsp;₱ <?php echo number_format($rows['sum(amount)'],2); ?> </font> </span>
 <?php
                                     }
                                      ?>
                                 </table>
+                            
 
                                 <script>
+
+                                    let number = 0;
                                     var total =document.getElementById("total");
+                                    var sign =document.getElementsByClassName("sign").innerHTML = "₱";
                                     var netPrice =document.getElementsByClassName("netPrice");
+                                    var numUSD = new Intl.NumberFormat('en-US',{
+                                        style:'currency',
+                                        currency:'USD'
+                                    }).format(number);
 
                                     var cal = 0;
+
                                     for (let i = 0; i < netPrice.length; i++) {
                                         cal +=parseInt(netPrice[i].innerHTML);
                                     }
-                                    total.innerHTML = cal;
-
-                                
-
+                                    total.innerHTML = sign + cal.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g,"$1,");
+                                    
                                 </script>
                             </div>
                         </div>
