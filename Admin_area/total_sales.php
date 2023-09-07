@@ -36,14 +36,6 @@ include('../includes/connect.php');
         <section class="py-5">
             <div class="container-sales">
 <style>
-body{
-    background-image: url('../images/adminmenu.png');
-    background-size: cover;
-    backdrop-filter: blur(5px);
-    color: transparent;
-    caret-color: transparent;
-    background-repeat: no-repeat;
-}
 
 .container-sales{
     max-width:100%;
@@ -56,10 +48,10 @@ body{
 </style>                
                 <div class="row justify-content-center">
                     <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header" style="background-color:#ee5511;color:#fff;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);margin-bottom:3px;">
-                                <h6 style="font-family: 'Poppins', sans-serif;font-size:15px;caret-color:transparent;text-indent:21px;margin-top:15px;margin-bottom:-15px;">&nbsp;&#x26AB;&nbsp;TOTAL SALES QUERY&nbsp;&#x26AB;&nbsp;Year:Month:Day&nbsp;&#x26AB;&nbsp;</h6> &nbsp;
-                                <a href="index.php?view_products" style="text-decoration:none;"><img src="../images/home2.png" alt="" style="width:25px;height:23px;margin-top:-22px;margin-left:-10px;"></a>
+                        <div class="card" style="background-color:#ffa500;padding:15px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);">
+                            <div class="card-header" style="background-color:#ee5511;color:#fff;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);margin-bottom:3px;display:relative;max-width:100%;width:330px;max-height:100%;height:40px;margin-bottom:10px;">
+                                <h6 style="font-family: 'Poppins', sans-serif;font-size:12px;caret-color:transparent;text-indent:28px;margin-top:-1px;margin-bottom:-25px;display:absolute;padding-bottom:10px;">&nbsp;&#x26AB;&nbsp;TOTAL SALES QUERY&nbsp;&#x26AB;&nbsp;Year:Month:Day&nbsp;&#x26AB;&nbsp;</h6> &nbsp;
+                                <a href="index.php?view_products" style="text-decoration:none;"><img src="../images/home2.png" alt="" style="width:25px;height:23px;margin-top:-14px;margin-left:-10px;"></a>
                                 
                             </div>
                             <div class="card-body" style="background-color:#ffc512;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);">
@@ -93,12 +85,12 @@ body{
                             </div>
                         </div>
 
-                        <div class="card mt-3" style="background-color:#ffc512;max-width:100%;width:800px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);">
-                            <div class="card-body" style="background-color:#ffc512;">
-                                <h6 style="background-color:#ee5511;color:#fff;max-width:100%;width:150px;padding: 10px 20px;text-align:center;font-family: 'Poppins', sans-serif;font-size:18px;
-                                box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);display:block;margin-left:auto;margin-right:auto;caret-color:transparent;">Your Sales</h6>
+                        <div class="card mt-3" style="background-color:#ffa500;max-width:100%;width:800px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);">
+                            <div class="card-body" style="background-color:#ffa500;">
+                                <h6 style="background-color:#ee5511;color:#fff;max-width:100%;width:150px;padding: 10px 20px;text-align:center;font-family: 'Poppins', sans-serif;font-size:15px;
+                                box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);display:relative;caret-color:transparent;margin-bottom:-10px;">Your Sales</h6>
                                 <br>
-                                <table id="order_data" class="table table-responsive table-bordered table-striped table-hover" style="max-width:100%; width:800px;display:block;margin-left:auto;margin-right:auto;caret-color:transparent;">
+                                <table id="order_data" class="table table-responsive table-bordered table-striped table-hover" style="max-width:100%; width:800px;display:block;margin-left:auto;margin-right:auto;caret-color:transparent;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);">
                                     <thead>
                                         <tr>
                                             <th style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;background-color:#ee5511;color:#fff;font-weight:normal;border:1px solid white;">Order ID</th>
@@ -134,7 +126,7 @@ body{
                                                                 <td style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;font-weight:normal;"><?php echo $row['order_id']; ?></td>
                                                                 <td style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;font-weight:normal;"><?php echo $row['invoice_number']; ?></td>
                                                                 <td style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:13px;text-align:center;caret-color:transparent;font-weight:normal;"><?php echo $row['payment_mode']; ?></td>
-                                                                <td class="netPrice" id="money" style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:14px;text-align:center;caret-color:transparent;font-weight:bold;"> <?php echo number_format( $row['amount'],2); ?></td>
+                                                                <td class="netPrice" id="money" style="width: 150px;vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:14px;text-align:center;caret-color:transparent;font-weight:bold;"><?php echo number_format( $row['amount'],2); ?></td>
 
                                                             </tr>
                                                        <?php 
@@ -162,15 +154,15 @@ body{
                                     ?>
                                     <tfoot>
                                         <tr>
-                                            <td colspan="3" style="padding: 10px 20px;font-family: 'Poppins', sans-serif;font-size:15px;vertical-align:middle;">Total&nbsp;<font size="1">&#x26AB;</font>&nbsp;<span style="font-family: 'Poppins', sans-serif;font-size:12px;">by: Filtered Date</span>&nbsp;<font size="1">&#x26AB;</font> &nbsp;</td>
-                                            <td id="total" class="sign" style="vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:15px;text-align:center;caret-color:transparent;font-weight:bold;">₱ </td>
+                                            <td colspan="3" style="padding: 10px 20px;font-family: 'Poppins', sans-serif;font-size:15px;vertical-align:middle;background-color:#708238;color:#fff;">Total&nbsp;<font size="1">&#x26AB;</font>&nbsp;<span style="font-family: 'Poppins', sans-serif;font-size:12px;">Filtered by Date</span>&nbsp;<font size="1">&#x26AB;</font> &nbsp;</td>
+                                            <td id="total" class="sign" style="vertical-align:middle;font-family: 'Poppins', sans-serif;font-size:15px;text-align:center;caret-color:transparent;font-weight:bold;background-color:#708238;color:#fff;">₱ </td>
                                         </tr>
                                     </tfoot>
                                     <?php
                                     
                                     $results = mysqli_query($conn, "SELECT sum(amount) FROM user_payments");
                                     while($rows = mysqli_fetch_array($results)){?>
-                                  <span style="background-color:green;color:#fff;padding:5px 10px;font-family: 'Poppins', sans-serif;font-size:17px;display:block;margin-left:auto;margin-right:auto;max-width:100%; width:800px;caret-color:transparent;"> Grand Total Sales :<font size="+1"><strong>&nbsp;&nbsp;₱ <?php echo number_format($rows['sum(amount)'],2); ?> </font> </span>
+                                  <span style="background-color:green;color:#fff;padding:5px 10px;font-family: 'Poppins', sans-serif;font-size:17px;display:block;margin-left:auto;margin-right:auto;max-width:100%; width:800px;caret-color:transparent;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);margin-bottom:3px;"> Grand Total Sales :<font size="+1"><strong>&nbsp;&nbsp;₱ <?php echo number_format($rows['sum(amount)'],2); ?> </font> </span>
 <?php
                                     }
                                      ?>

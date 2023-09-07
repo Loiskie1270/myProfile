@@ -25,7 +25,7 @@ if(isset($_POST['insert_brand'])){
 }}
 ?>
 
-<h3 class="text-center mt-3 mb-0" style="background-color:#fe7a00;color:#fff; font-family: 'Poppins', sans-serif; font-size:18px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px;">INSERT BRAND</h3>
+<h3 class="text-center mt-3 mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:250px; padding:5px 15px;border-top-right-radius:3px;border-top-left-radius:3px; margin-bottom:5px;display:block;margin-left:auto;margin-right:auto;caret-color:transparent;">INSERT BRAND</h3>
 <form action="" method="post" class="mb-2">
 <div class="input-group w-90 mb-3">
   <span class="input-group-text" id="basic-addon1" style="background-color: #db6900;color:fff;"><i class="fa-solid fa-file-invoice"></i></span>
@@ -33,7 +33,7 @@ if(isset($_POST['insert_brand'])){
 </div>
 <div class="input-group w-10 mb-2 m-auto">
   
-  <input type="submit" class="text-light border-0 p-2 my-2" style="font-family: 'Poppins', sans-serif;background-color: #ff571d; color:#fff; width: 20%; border-radius:3px;" name="insert_brand" value="Insert Brands">
+  <input type="submit" class="text-light border-0 p-2 my-2" style="display:block;margin-left:auto;margin-right:auto; font-family: 'Poppins', sans-serif;background-color: #ff571d; color:#fff; width: 150px;font-size:14px; border-radius:3px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);" value="Insert Brands">
   <!---<button class="bg-info p-1 my-3 border-0">Insert Brands</button>--->
 </div>
 </form>

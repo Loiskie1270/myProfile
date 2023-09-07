@@ -4,7 +4,7 @@ if(isset($_GET['edit_products'])){
     //echo $edit_id;
     $get_data="select * from `products` where product_id=$edit_id";
     $result=mysqli_query($conn,$get_data);
-    $row=mysqli_fetch_assoc( $result);
+    $row=mysqli_fetch_assoc($result);
     $product_title= $row['product_title'];
     $product_description= $row['product_description'];
     $product_keywords= $row['product_keywords'];
@@ -20,6 +20,7 @@ if(isset($_GET['edit_products'])){
     $result_category=mysqli_query($conn,$select_category);
     $row_category=mysqli_fetch_assoc($result_category);
     $category_title=$row_category['category_title'];
+    
     //echo  $category_title;
 
      // FETCHING BRAND NAME (BRAND_ID)
@@ -30,33 +31,33 @@ if(isset($_GET['edit_products'])){
      //echo  $brand_title;
 }
 ?>
-<div class="container w-50" style="background-color:#ffbc7e;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:3px;">
-    <h3 class="text-center" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px; padding:10px 10px 10px 10px; margin-bottom:15px; display: inline-block;  width:fit-content; margin-top:20px; border-radius:3px; margin-left:180px;" >EDIT PRODUCT</h3>
+<div class="container edit" style="max-width:100%;background-color:#ffbc7e;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:500px; display:block; margin-left:auto; margin-right:auto; border-radius:3px;padding:5px 10px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3); margin-top:10px;margin-bottom:10px;">
+    <h3 class="text-center" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px; padding:10px 10px; margin-bottom:15px; display: block;  margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto;width:200px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);" >EDIT PRODUCT</h3>
 
     <form action="" method="post" enctype="multipart/form-data" style="background-color:#ffbc7e;color:#fff; width:100%;">
 
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;">
 
-            <label for="product_title" class="form-label">Product Title</label>
-            <input type="text" id="product_title" value="<?php echo $product_title?>" name="product_title" class="form-control" required="required">
+            <label for="product_title" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:12;color:darkgreen;font-weight:bold;margin-bottom:5px;">Product Title</label>
+            <input type="text" id="product_title" value="<?php echo $product_title?>" name="product_title" class="form-control" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
         </div>
 
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;">
 
-            <label for="product_description" class="form-label ">Product Description</label>
-            <input type="text" id="product_description" value="<?php echo $product_description?>" name="product_description" class="form-control" required="required">
+            <label for="product_description" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:12;color:darkgreen;font-weight:bold;margin-bottom:5px;">Product Description</label>
+            <input type="text" id="product_description" value="<?php echo $product_description?>" name="product_description" class="form-control" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
         </div>
 
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;">
 
-            <label for="product_keywords" class="form-label ">Product Keywords</label>
-            <input type="text" id="product_keywords" value="<?php echo $product_keywords?>"  name="product_keywords" class="form-control" required="required">
+            <label for="product_keywords" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:12;color:darkgreen;font-weight:bold;">Product Keywords</label>
+            <input type="text" id="product_keywords" value="<?php echo $product_keywords?>"  name="product_keywords" class="form-control" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
         </div>
 
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;">
 
-        <label for="product_category" class="form-label ">Product Category</label>
-            <select name="product_category" class="form-select">
+        <label for="product_category" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:12;color:darkgreen;font-weight:bold;">Product Category</label>
+            <select name="product_category" class="form-select" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
                 <option value="<?php echo $category_title?>"><?php echo $category_title?></option>
                 <?php 
 $select_category_all="select * from `categories`";
@@ -65,15 +66,15 @@ while($row_category_all=mysqli_fetch_assoc($result_category_all)){
     $category_title=$row_category_all['category_title'];
     $category_id=$row_category_all['category_id'];  
     echo "<option value='category_id'>$category_title</option>";
+    
 };    
-  
 ?>
-                
             </select>
         </div>
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;">
-        <label for="product_brands" class="form-label ">Product Brand</label>    
-            <select name="product_brands" class="form-select">
+
+        <label for="product_brands" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:12;color:darkgreen;font-weight:bold;">Product Brand</label>  
+            <select name="product_brands" class="form-select" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
                 <option value="<?php echo $brand_title?>"><?php echo $brand_title?></option>
                 <?php 
 $select_brand_all="select * from `brands`";
@@ -88,32 +89,33 @@ while($row_brand_all=mysqli_fetch_assoc($result_brand_all)){
             </select>
         </div>
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;margin-top:2px;">
-            <label for="product_image1" class="form-label">Image1</label>
-            <div class="d-flex">
-            <input type="file" id="product_image1" name="product_image1" class="form-control w-60 m-auto" required="required">&nbsp;&nbsp;
+            <label for="product_image1" class="form-label" style="font-family: 'Poppins', sans-serif;font-size:12;color:darkgreen;font-weight:bold;">Image1</label>
+            <div class="d-flex" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-20px;margin-bottom:10px;">
+            <input type="file" id="product_image1" name="product_image1" class="form-control w-60 m-auto" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-25px;">&nbsp;&nbsp;
             <img src="./product_images/<?php echo $product_image1 ?>" style="width:15%; border-radius:5px;" alt="" class="product1_img">
             </div>
         </div>
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto;margin-top:-2px;">
-            <label for="product_image2" class="form-label" style="font-family: 'Poppins', sans-serif; font-size:14px; margin-top:-15px;">Image2</label>
-            <div class="d-flex">
-            <input type="file" id="product_image2" name="product_image2" class="form-control w-60 m-auto" required="required">&nbsp;&nbsp;
+
+            <label for="product_image2" class="form-label" style="font-family: 'Poppins', sans-serif; font-size:14px; margin-top:-15px;font-size:12;color:darkgreen;font-weight:bold;">Image2</label>
+            <div class="d-flex" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-20px;margin-bottom:10px;">
+            <input type="file" id="product_image2" name="product_image2" class="form-control w-60 m-auto" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-25px;">&nbsp;&nbsp;
             <img src="./product_images/<?php echo $product_image2 ?>" style="width:15%; border-radius:5px;" alt="" class="product1_img">
             </div>
         </div>
         <div class="form_outline m-auto mb-0" style="width:80%; display:block; margin-left:auto; margin-right:auto; gap:2;">
-            <label for="product_image3" class="form-label" style="font-family: 'Poppins', sans-serif; font-size:14px; margin-top:-15px;">Image3</label>
-            <div class="d-flex">
-            <input type="file" id="product_image3" name="product_image3" class="form-control w-60 m-auto" required="required">&nbsp;&nbsp;
+            <label for="product_image3" class="form-label" style="font-family: 'Poppins', sans-serif; font-size:14px; margin-top:-15px;font-size:12;color:darkgreen;font-weight:bold;">Image3</label>
+            <div class="d-flex" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-20px;margin-bottom:10px;">
+            <input type="file" id="product_image3" name="product_image3" class="form-control w-60 m-auto" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-25px;">&nbsp;&nbsp;
             <img src="./product_images/<?php echo $product_image3 ?>" style="width:15%; border-radius:5px;" alt="" class="product1_img">
             </div>
         </div>
         <div class="form_outline m-auto mb-4" style="width:80%; display:block; margin-left:auto; margin-right:auto;">
-            <label for="product_price" class="form-label ">Product Price</label>
-            <input type="text" id="product_price" value="<?php echo $product_price?>" name="product_price" class="form-control" required="required" style="margin-top:-10px;">
+            <label for="product_price" class="form-label" style="font-family: 'Poppins', sans-serif; font-size:14px; margin-top:-15px;font-size:12;color:darkgreen;font-weight:bold;">Product Price</label>
+            <input type="text" id="product_price" value="<?php echo $product_price?>" name="product_price" class="form-control" required="required" style="font-family: 'Poppins', sans-serif; font-size:13px;margin-top:-5px;margin-bottom:10px;">
         </div>
         <div class="text-center">
-        <input type="submit" name="edit_product" value="Update Product" style="background-color: #ff571d;color:#fff; margin-bottom:15px; display: inline-block; margin-left:50px; width: fit-content; margin-top:20px; border-radius:3px; margin-left:30px;"  class="btn mb-3 border-0">
+        <input type="submit" name="edit_product" value="Update Product" style="background-color: #ff571d;color:#fff; margin-bottom:15px; display: block; margin-left:auto;margin-right:auto; margin-top:20px; border-radius:3px;font-family: 'Poppins', sans-serif; font-size:15px;width:200px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);"  class="btn mb-3 border-0">
         </div>
     </form>
 </div>

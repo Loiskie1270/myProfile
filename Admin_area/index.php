@@ -61,7 +61,6 @@ body{
   margin-right: 3px;
 
 }
-
 .card{
   box-shadow: 0px 0px 2px 2px lightgray;
   background-color: #fffef8;
@@ -144,7 +143,8 @@ body{
   font-weight: 500;
 }
 
-.nav-link:hover{
+button:hover{
+  background: #e8b447 !important;
   font-weight: bold;
   color:#fff;
   font-family: 'Poppins', sans-serif;
@@ -218,7 +218,7 @@ body{
               </li>";
               }else{
                 echo "<li class='nav-item'>
-                <a class='nav-link text-light' href='#'>Welcome <strong style='color: yellow'>    ".$_SESSION['admin_adminname']."</strong></a>
+                <a class='nav-link text-light' href='#'>Welcome&nbsp; <strong style='color: yellow'>    ".$_SESSION['admin_adminname']."</strong></a>
               </li>";
               }   
 if(!isset($_SESSION['admin_adminname'])){
@@ -242,7 +242,7 @@ if(!isset($_SESSION['admin_adminname'])){
             </nav>
             <!---second child------>
             <div class="bg-light">
-                <h2 class="text-center mb-0 p-2" style="background-color:#ffbc7e;color:#333; font-family: 'Poppins', sans-serif; font-size:25px;">MANAGE DETAILS</h2>
+                <h2 class="text-center mb-0 p-2" style="background-color:#ffbc7e;color:darkgreen; font-family: 'Poppins', sans-serif; font-size:17px;font-weight:bold;caret-color:transparent;">MANAGE DETAILS</h2>
             </div>
             <!---third child------>
             <div class="row">
@@ -250,25 +250,28 @@ if(!isset($_SESSION['admin_adminname'])){
                   
  
                     <div class="button bg-dark mt-0 text-center p-1">
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px; width:15%;"><a href="insert_product.php" class="nav-link text-light my-1">INSERT PRODUCT</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px; width:160px;"><a href="insert_product.php" class="nav-link text-light my-1">INSERT PRODUCT</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?view_products" class="nav-link text-light my-1">VIEW PRODUCTS</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="pagination.php" class="nav-link text-light my-1">VIEW PRODUCTS</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?insert_category" class="nav-link text-light my-1">INSERT CATEGORIES</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?insert_category" class="nav-link text-light my-1">INSERT CATEGORY</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?view_categories" class="nav-link text-light my-1">VIEW CATEGORIES</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?view_categories" class="nav-link text-light my-1">VIEW CATEGORIES</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?insert_brand" class="nav-link text-light my-1">BOTIKA CHOICE</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?insert_brand" class="nav-link text-light my-1">INSERT BRAND</a></button>
 
-                            <Button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?view_brands" class="nav-link text-light my-1">VIEW B.CHOICE</a></Button>
+                            <Button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?view_brands" class="nav-link text-light my-1">VIEW B.CHOICE</a></Button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?list_orders" class="nav-link text-light my-1">ALL ORDERS</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?list_orders" class="nav-link text-light my-1">ALL ORDERS</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?list_payments" class="nav-link text-light my-1">ALL PAYMENTS</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?list_payments" class="nav-link text-light my-1">ALL PAYMENTS</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?list_users" class="nav-link text-light my-1">USERS LIST</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?list_users" class="nav-link text-light my-1">USERS LIST</a></button>
 
-                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:13px;width:15%;"><a href="index.php?logout_user" class="nav-link text-light my-1">LOGOUT</a></button>
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="total_sales.php" class="nav-link text-light my-1">TOTAL SALES</a></button>
+
+                                                        
+                            <button class="my-3 text-center p-1" style="background-color:#ff571d;color:#333; font-family: 'Poppins', sans-serif; font-size:12px;width:160px;"><a href="index.php?logout_user" class="nav-link text-light my-1">LOGOUT</a></button>
 
                     </div>
 
@@ -283,9 +286,9 @@ if(!isset($_SESSION['admin_adminname'])){
                     if(isset($_GET['insert_brand'])){
                         include('insert_brands.php');
                     }
-                    if(isset($_GET['view_products'])){
-                        include('view_products.php');
-                    }
+                    //if(isset($_GET['view_products'])){
+                    //    include('view_products.php');
+                    //}
                     if(isset($_GET['edit_products'])){
                         include('edit_products.php');
                     }
@@ -318,9 +321,13 @@ if(!isset($_SESSION['admin_adminname'])){
                     if(isset($_GET['list_payments'])){
                         include('list_payments.php');
                     }
+                    if(isset($_GET['delete_payment'])){
+                      include('delete_payment.php');
+                    }
                     if(isset($_GET['list_users'])){
                         include('list_users.php');
                     }
+                                      
                     if(isset($_GET['logout_user'])){
                         include('logout_user.php');
                     }

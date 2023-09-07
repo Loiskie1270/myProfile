@@ -59,7 +59,7 @@ if(isset($_POST['insert_product'])){
 body{
         background-color:#f5ffcf;
         color:#fff;
-        background-image: url('../images/background_botika.png');
+        background-image: url('../images/adminmenu.png');
         backdrop-filter: blur(1px);
         color: transparent;
         caret-color: transparent;
@@ -86,7 +86,7 @@ body{
 
     }
 form{
-        background-color:#f89851;
+        background-color:#ee5511;
         color:#fff;
         max-width: 100%;
         width: 450px;
@@ -104,18 +104,18 @@ form{
     h3{
         background-color:#ff571d;
         color:#fff;
-        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
         font-family: 'Poppins', sans-serif;
         font-size:15px;
+        max-width:100%;
         width:200px;
         padding:10px 5px 10px 5px;
         border-top-right-radius:8px;
         border-top-left-radius:8px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
         caret-color:transparent;
         margin-top:15px;
+        margin-bottom:8px;
+        margin-left:22px;
+        text-indent:25px;
     }
 
 .form-outline{
@@ -137,8 +137,6 @@ input.btn:hover{
     color: darkgreen !important;
 }
 
-
-
 </style>
     
  </head>
@@ -146,7 +144,7 @@ input.btn:hover{
 
      <div class="container-insert">
         <h3 class="text-center">INSERT PRODUCTS</h3>
-        <a href="index.php?view_products" style="text-decoration:none;"><img src="../images/home2.png" alt="" style="width:25px;height:23px;margin-top:-82px;margin-left:50px;"></a>
+        <a href="index.php?view_products" style="text-decoration:none;"><img src="../images/home2.png" alt="" style="width:25px;height:23px;margin-top:-80px;margin-left:40px;"></a>
         <!--Form-->
         <form action="" method="post" enctype="multipart/form-data" style="margin-top:-30px;">
             <div class="form-outline">
@@ -239,7 +237,7 @@ input.btn:hover{
             <div> 
                 <!--BUTTON INSERT PRODUCT-->
                 <div class="form-outline m-auto" style="padding: 5px 15px; width:350px; margin-top:20px; display:block; margin-left:auto; margin-right:auto;">
-                <input type="submit" name="insert_product" class="btn mb-2 px-3" value="Insert Product" style="padding: 5px 5px 5px 5px; width:200px; display:block; margin-left:auto; margin-right:auto;background-color:#ff571d;color:#fff;margin-bottom:5px;font-family: 'Poppins', sans-serif;font-size:14px;">
+                <input type="submit" name="insert_product" class="btn mb-2 px-3" value="Insert Product" style="padding: 5px 5px 5px 5px; width:200px; display:block; margin-left:auto; margin-right:auto;background-color:#ffa500;color:#fff;margin-bottom:5px;font-family: 'Poppins', sans-serif;font-size:14px;box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);">
                 
             </div>    
              

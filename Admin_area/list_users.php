@@ -2,9 +2,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Amatic+SC:wght@700&family=Bebas+Neue&family=Caveat&family=Clicker+Script&family=Pacifico&family=Permanent+Marker&family=Rubik+Puddles&display=swap');
 </style>
 
-<h4 class="text-center mt-3 mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:20px;width:100%; padding:10px 5px 10px 5px; margin-bottom:5px">ALL USERS</h4>
+<h4 class="text-center mt-3 mb-0" style="background-color:#ff571d;color:#fff; font-family: 'Poppins', sans-serif; font-size:15px;width:250px; padding:5px 15px;border-top-right-radius:3px;border-top-left-radius:3px; margin-bottom:5px;display:block;margin-left:auto;margin-right:auto;caret-color:transparent;">ALL USERS</h4>
  
-<table class="table table-bordered mt-0">
+<table class="table-responsive" style="display:block;margin-left:auto;margin-right:auto;">
 
     <thead>
     <?php
@@ -16,14 +16,14 @@ $row_count=mysqli_num_rows($result);
 if($row_count==0){
     echo "<h4 class='text-danger text-center mt-4'>No User to display</h4>";
 }else{
-    echo " <tr>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>SI no.</th>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Username</th>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Email</th>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Uploaded Image</th>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Address</th>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Mobile No.</th>
-  <th class='text-center' style='background-color:#ffbc7e;color:#333;font-family: 'Poppins', sans-serif; font-size:12px;font-weight:bold; border-color:#333'>Delete</th>
+    echo "<tr>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;border:2px solid lightgrey;font-family: Poppins, sans-serif; font-size:11px;width: 70px;margin-left:5px;padding:5px 15px;caret-color:transparent;border-top-left-radius:3px;'>SI no.</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px;width: 150px;margin-left:5px;padding:5px 15px;caret-color:transparent;border:2px solid lightgrey;'>Username</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px;width: 150px;margin-left:5px;padding:5px 15px;caret-color:transparent;border:2px solid lightgrey;'>Email</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px;width: 150px;margin-left:5px;padding:5px 15px;caret-color:transparent;border:2px solid lightgrey;'>Uploaded Image</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px;width: 250px;margin-left:5px;padding:5px 15px;caret-color:transparent;border:2px solid lightgrey;'>Address</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px;width: 140px;margin-left:5px;padding:5px 15px;caret-color:transparent;border:2px solid lightgrey;'>Mobile No.</th>
+  <th class='text-center' style='background-color:#ffbc7e;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px;width: 140px;margin-left:5px;padding:5px 15px;caret-color:transparent;border:2px solid lightgrey;border-top-right-radius:3px;'>Delete</th>
   </tr>
   </thead>
   <tbody class='bg-secondary text-light'>";
@@ -40,15 +40,14 @@ if($row_count==0){
         $number++;
 
         echo "<tr>
-        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'>$number</td>
-        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'>$username</td>
-        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'>$user_email</td>
-        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'><img src='../user_area/user_images/$user_image' alt='$username' class='profile_img' ' style='width:20%;height:25%;'/></td>
-        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'>$user_address</td>
-        <td class='bg-secondary text-center text-light' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'>$user_mobile</td>
+        <td class='text-center' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;width: 70px;'>$number</td>
+        <td class='text-center' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;width: 150px;'>$username</td>
+        <td class='text-center' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;width: 150px;'>$user_email</td>
+        <td class='text-center' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;width: 150px;'><img src='../user_area/user_images/$user_image' alt='$username' class='profile_img' ' style='width:20%;border-radius: 50%;background:#fff;margin-top:5px;margin-bottom:5px;display:block;margin-left:auto;margin-right:auto;border:1px solid white;'/></td>
+        <td class='text-center' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;width: 250px;'>$user_address</td>
+        <td class='text-center' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;width: 140px;'>$user_mobile</td>
                 
-        <td class='bg-secondary text-light text-center text-decoration-none' style='background-color:#ffbc7e;color:#333;font-family: Poppins, sans-serif; font-size:12px; vertical-align:middle;'><a href='index.php?delete_order=<?php echo $user_id ?>' 
-        type=button class=text-light text-decoration-none data-toggle=modal data-target=#exampleModal><img src='../images/trash.png' alt='' class='brightness'></a></td>
+        <td class='text-center text-decoration-none' style='background-color:#eecc99;color:darkgreen;font-family: Poppins, sans-serif; font-size:12px; width:140px; vertical-align:middle;padding:5px 15px;caret-color:transparent;border:1px solid white;'><a href='index.php?delete_order=<?php echo $user_id ?>' class='text-light text-decoration-none' onclick='return checkdelete()' ><img src='../images/trash2.png' alt='' class='brightness' style='width:25px;'></a></td>
         
  </tr>";
         
@@ -56,14 +55,18 @@ if($row_count==0){
 }
 
 ?>
-    
+<script>
+    function checkdelete(){
+        return confirm('Delete this account now?');
+    }
+</script>   
     
        
     </tbody>
 
 </table>
 
-<!-- Modal -->
+<!-- Modal 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -78,4 +81,4 @@ if($row_count==0){
       </div>
     </div>
   </div>
-</div>
+</div>-->
